@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NadaBrahman — Sanskrit·Sound·Cosmos | Enhanced Knowledge Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Noto+Serif+Devanagari:wght@400;600&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --saffron: #B8520A;
+  --saffron-light: #F5E6D3;
+  --gold: #A67C00;
+  --gold-light: #FFF8E1;
+  --maroon: #6B1C1C;
+  --maroon-light: #FAF0F0;
+  --lotus: #9C3A5C;
+  --teal: #0A5F52;
+  --teal-light: #E0F5F1;
+  --ink: #1A1209;
+  --muted: #5A4A3A;
+  --faint: #8A7A6A;
+  --surface: #FDFAF6;
+  --surface2: #F5EFE6;
+  --card: #FFFFFF;
+  --border: rgba(107,28,28,0.12);
+  --border2: rgba(107,28,28,0.22);
+  --shadow: 0 2px 20px rgba(107,28,28,0.08);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'EB Garamond', Georgia, serif;
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.devanagari {
+  font-family: 'Noto Serif Devanagari', serif;
+}
+
+/* ═══ HEADER ═══ */
+.site-header {
+  background: linear-gradient(160deg, #2C0E0E 0%, #5C1A1A 40%, #3A1200 100%);
+  padding: 3rem 2rem 2.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.site-header::before {
+  content: 'नादब्रह्म';
+  font-family: 'Noto Serif Devanagari', serif;
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+  font-size: 160px; opacity: 0.04; color: #FFD700;
+  white-space: nowrap; pointer-events: none;
+}
+.header-om {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 48px; color: #FFD700; opacity: 0.9;
+  margin-bottom: 0.5rem; display: block;
+  text-shadow: 0 0 40px rgba(255,215,0,0.3);
+}
+.site-header h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: 2.2rem; font-weight: 600;
+  color: #FFD700; letter-spacing: 0.04em;
+  margin-bottom: 0.4rem;
+}
+.site-header .tagline {
+  color: rgba(255,220,150,0.75);
+  font-size: 1rem; font-style: italic;
+  margin-bottom: 0.3rem;
+}
+.site-header .subtitle {
+  color: rgba(255,220,150,0.5);
+  font-size: 0.85rem;
+}
+.back-link {
+  display: inline-block; margin-top: 1.2rem;
+  color: rgba(255,220,150,0.7); font-size: 0.85rem;
+  text-decoration: none; border: 1px solid rgba(255,215,0,0.25);
+  padding: 5px 14px; border-radius: 20px;
+  transition: all 0.2s;
+}
+.back-link:hover { background: rgba(255,215,0,0.1); color: #FFD700; }
+
+/* ═══ NAV ═══ */
+.nav-wrap {
+  background: var(--card);
+  border-bottom: 1px solid var(--border2);
+  position: sticky; top: 0; z-index: 100;
+  box-shadow: 0 2px 12px rgba(107,28,28,0.1);
+}
+.nav-scroll {
+  display: flex; overflow-x: auto;
+  padding: 0 1.5rem; gap: 0;
+  scrollbar-width: none; max-width: 1200px; margin: 0 auto;
+}
+.nav-scroll::-webkit-scrollbar { display: none; }
+.nav-tab {
+  padding: 1rem 1.25rem; font-size: 0.82rem;
+  font-family: 'EB Garamond', serif; font-weight: 600;
+  letter-spacing: 0.04em; white-space: nowrap;
+  border: none; background: none; cursor: pointer;
+  color: var(--muted); border-bottom: 3px solid transparent;
+  transition: all 0.2s; text-transform: uppercase;
+}
+.nav-tab:hover { color: var(--maroon); }
+.nav-tab.active {
+  color: var(--maroon); border-bottom-color: var(--saffron);
+}
+
+/* ═══ MAIN LAYOUT ═══ */
+.container { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.5rem; }
+
+.panel { display: none; }
+.panel.active { display: block; }
+
+/* ═══ SECTION TITLES ═══ */
+.section-head {
+  margin-bottom: 2rem; padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border2);
+}
+.section-head .sanskrit-title {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 1.4rem; color: var(--maroon); opacity: 0.8;
+  display: block; margin-bottom: 0.2rem;
+}
+.section-head h2 {
+  font-size: 2rem; font-weight: 600; color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+.section-head p {
+  color: var(--muted); font-style: italic; font-size: 1rem;
+}
+
+/* ═══ CARDS ═══ */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+}
+.card h3 {
+  font-size: 1.25rem; font-weight: 600; color: var(--maroon);
+  margin-bottom: 0.75rem;
+}
+.card h4 {
+  font-size: 1.05rem; font-weight: 600; color: var(--saffron);
+  margin-bottom: 0.5rem; margin-top: 1rem;
+}
+.card p { color: var(--muted); margin-bottom: 0.75rem; }
+.card p:last-child { margin-bottom: 0; }
+
+.card-accent {
+  border-left: 4px solid var(--saffron);
+  background: var(--saffron-light);
+}
+.card-teal { border-left: 4px solid var(--teal); background: var(--teal-light); }
+.card-gold { border-left: 4px solid var(--gold); background: var(--gold-light); }
+.card-lotus { border-left: 4px solid var(--lotus); background: #FFF0F5; }
+
+/* ═══ GRID ═══ */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+@media (max-width: 768px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+}
+
+/* ═══ QUOTE BLOCK ═══ */
+.shloka {
+  background: var(--surface2);
+  border-left: 4px solid var(--gold);
+  padding: 1.25rem 1.5rem; border-radius: 0 8px 8px 0;
+  margin: 1.5rem 0;
+}
+.shloka .verse {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 1.1rem; color: var(--maroon);
+  line-height: 1.9; margin-bottom: 0.5rem;
+}
+.shloka .translation {
+  font-style: italic; color: var(--muted); font-size: 0.95rem;
+}
+.shloka .source {
+  font-size: 0.8rem; color: var(--faint); margin-top: 0.4rem;
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+
+/* ═══ SAPTASVARA MATRIX ═══ */
+.svara-grid {
+  display: grid; grid-template-columns: repeat(7, 1fr);
+  gap: 8px; margin: 1.5rem 0;
+}
+.svara-cell {
+  background: var(--card); border: 1px solid var(--border2);
+  border-radius: 8px; padding: 0.75rem 0.25rem;
+  text-align: center; cursor: pointer;
+  transition: all 0.2s;
+}
+.svara-cell:hover, .svara-cell.active {
+  background: var(--maroon); border-color: var(--maroon);
+  transform: translateY(-2px); box-shadow: 0 4px 12px rgba(107,28,28,0.2);
+}
+.svara-cell .svara-devanagari {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 1.5rem; color: var(--maroon); display: block;
+}
+.svara-cell:hover .svara-devanagari,
+.svara-cell.active .svara-devanagari { color: #FFD700; }
+.svara-cell .svara-roman {
+  font-size: 0.75rem; font-weight: 600; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+.svara-cell:hover .svara-roman,
+.svara-cell.active .svara-roman { color: rgba(255,220,150,0.8); }
+.svara-cell .svara-freq {
+  font-size: 0.65rem; color: var(--faint); margin-top: 2px;
+}
+.svara-cell:hover .svara-freq,
+.svara-cell.active .svara-freq { color: rgba(255,220,150,0.6); }
+
+.svara-detail {
+  display: none; background: var(--card);
+  border: 1px solid var(--border2); border-radius: 8px;
+  padding: 1.5rem; margin-top: 1rem; box-shadow: var(--shadow);
+}
+.svara-detail.active { display: block; }
+.svara-detail h3 {
+  font-size: 1.4rem; color: var(--maroon); margin-bottom: 1rem;
+}
+
+/* ═══ BEEJAKSHARA ═══ */
+.beeja-grid {
+  display: grid; grid-template-columns: repeat(6, 1fr);
+  gap: 10px; margin: 1.5rem 0;
+}
+@media (max-width: 600px) { .beeja-grid { grid-template-columns: repeat(3, 1fr); } }
+.beeja-cell {
+  background: var(--card); border: 1px solid var(--border2);
+  border-radius: 8px; padding: 1rem 0.5rem; text-align: center;
+  cursor: pointer; transition: all 0.2s;
+}
+.beeja-cell:hover, .beeja-cell.active {
+  background: #3A0A0A; border-color: #3A0A0A;
+  transform: translateY(-2px); box-shadow: 0 4px 12px rgba(58,10,10,0.25);
+}
+.beeja-cell .b-sanskrit {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 1.8rem; color: var(--maroon); display: block; line-height: 1.3;
+}
+.beeja-cell:hover .b-sanskrit,
+.beeja-cell.active .b-sanskrit { color: #FFD700; }
+.beeja-cell .b-name {
+  font-size: 0.75rem; color: var(--muted); margin-top: 4px;
+  font-weight: 600; letter-spacing: 0.04em;
+}
+.beeja-cell:hover .b-name,
+.beeja-cell.active .b-name { color: rgba(255,220,150,0.8); }
+
+.beeja-detail {
+  display: none; background: var(--card);
+  border: 1px solid var(--border2); border-radius: 8px;
+  padding: 1.75rem; margin-top: 1rem; box-shadow: var(--shadow);
+}
+.beeja-detail.active { display: block; }
+
+/* ═══ VIEWPOINT TABS ═══ */
+.vp-tabs {
+  display: flex; flex-wrap: wrap; gap: 8px; margin: 1.5rem 0 1rem;
+}
+.vp-tab {
+  padding: 6px 16px; border-radius: 20px; font-size: 0.82rem;
+  font-family: 'EB Garamond', serif; font-weight: 600;
+  border: 1px solid var(--border2); background: var(--card);
+  cursor: pointer; color: var(--muted); transition: all 0.2s;
+  letter-spacing: 0.03em;
+}
+.vp-tab:hover { border-color: var(--teal); color: var(--teal); }
+.vp-tab.active { background: var(--teal); color: #fff; border-color: var(--teal); }
+
+.vp-panel { display: none; }
+.vp-panel.active { display: block; }
+
+/* ═══ RAGA MODULE ═══ */
+.raga-search-bar {
+  width: 100%; padding: 12px 18px; font-size: 1rem;
+  font-family: 'EB Garamond', serif;
+  border: 1px solid var(--border2); border-radius: 8px;
+  background: var(--card); color: var(--ink);
+  margin-bottom: 1rem; outline: none;
+  transition: border-color 0.2s;
+}
+.raga-search-bar:focus { border-color: var(--saffron); }
+
+.raga-filters {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.5rem;
+}
+.raga-filter-btn {
+  padding: 5px 14px; border-radius: 16px; font-size: 0.8rem;
+  border: 1px solid var(--border2); background: var(--card);
+  cursor: pointer; color: var(--muted); transition: all 0.2s;
+  font-family: 'EB Garamond', serif;
+}
+.raga-filter-btn:hover { border-color: var(--gold); color: var(--gold); }
+.raga-filter-btn.active { background: var(--saffron); color: #fff; border-color: var(--saffron); }
+
+.raga-list { display: grid; grid-template-columns: 1fr; gap: 0.75rem; }
+.raga-item {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 8px; overflow: hidden; cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.raga-item:hover { border-color: var(--saffron); box-shadow: var(--shadow); }
+.raga-item.open { border-color: var(--saffron); }
+.raga-header {
+  padding: 1rem 1.25rem; display: flex;
+  justify-content: space-between; align-items: center;
+}
+.raga-header .raga-name { font-size: 1.1rem; font-weight: 600; color: var(--maroon); }
+.raga-header .raga-meta { font-size: 0.82rem; color: var(--muted); margin-top: 2px; }
+.raga-header .raga-arrow {
+  color: var(--saffron); font-size: 1.2rem; transition: transform 0.2s;
+}
+.raga-item.open .raga-arrow { transform: rotate(180deg); }
+.raga-body {
+  display: none; padding: 0 1.25rem 1.25rem;
+  border-top: 1px solid var(--border);
+}
+.raga-item.open .raga-body { display: block; }
+
+.svara-pills { display: flex; flex-wrap: wrap; gap: 6px; margin: 0.75rem 0; }
+.svara-pill {
+  padding: 3px 12px; border-radius: 12px; font-size: 0.82rem;
+  background: var(--saffron-light); color: var(--saffron);
+  border: 1px solid rgba(184,82,10,0.25); font-weight: 600;
+}
+.svara-pill.komal {
+  background: #E8F5E9; color: #2E7D32;
+  border-color: rgba(46,125,50,0.25);
+}
+.svara-pill.tivra {
+  background: #FFF3E0; color: #E65100;
+  border-color: rgba(230,81,0,0.25);
+}
+
+.raga-attribs {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem; margin: 0.75rem 0;
+}
+.raga-attrib {
+  background: var(--surface2); border-radius: 6px;
+  padding: 0.5rem 0.75rem;
+}
+.raga-attrib .ra-label { font-size: 0.72rem; color: var(--faint); text-transform: uppercase; letter-spacing: 0.06em; }
+.raga-attrib .ra-val { font-size: 0.9rem; font-weight: 600; color: var(--ink); }
+
+.raga-source-link {
+  display: inline-block; font-size: 0.82rem; color: var(--teal);
+  text-decoration: none; margin-top: 0.5rem;
+  border-bottom: 1px solid transparent;
+}
+.raga-source-link:hover { border-bottom-color: var(--teal); }
+
+/* ═══ CROSS-REFERENCE TABLE ═══ */
+.xref-table {
+  width: 100%; border-collapse: collapse; font-size: 0.9rem;
+  margin: 1.5rem 0;
+}
+.xref-table th {
+  background: var(--maroon); color: #FFD700;
+  padding: 0.75rem 1rem; text-align: left;
+  font-family: 'EB Garamond', serif; font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.xref-table td {
+  padding: 0.7rem 1rem; border-bottom: 1px solid var(--border);
+  color: var(--muted); vertical-align: top;
+}
+.xref-table tr:hover td { background: var(--saffron-light); }
+.xref-table .devanagari-cell {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 1.2rem; color: var(--maroon);
+}
+
+/* ═══ PHILOSOPHY CARDS ═══ */
+.phil-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 8px; padding: 1.75rem; margin-bottom: 1.5rem;
+  box-shadow: var(--shadow);
+}
+.phil-card .phil-school {
+  font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--saffron); font-weight: 600; margin-bottom: 0.5rem;
+}
+.phil-card h3 {
+  font-size: 1.4rem; color: var(--maroon); margin-bottom: 0.75rem;
+}
+.phil-card p { color: var(--muted); margin-bottom: 0.75rem; line-height: 1.8; }
+
+/* ═══ NETWORK LINKS ═══ */
+.network-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.network-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 8px; padding: 1.25rem; text-decoration: none;
+  display: block; transition: all 0.2s; box-shadow: var(--shadow);
+}
+.network-card:hover {
+  border-color: var(--saffron);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(107,28,28,0.12);
+}
+.network-card .nc-icon {
+  font-size: 1.5rem; margin-bottom: 0.5rem; display: block;
+}
+.network-card .nc-name {
+  font-size: 1rem; font-weight: 600; color: var(--maroon);
+  margin-bottom: 0.25rem;
+}
+.network-card .nc-url {
+  font-size: 0.78rem; color: var(--teal); margin-bottom: 0.5rem;
+}
+.network-card .nc-desc { font-size: 0.88rem; color: var(--muted); }
+
+/* ═══ CHATBOT / CONTACT ═══ */
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+@media (max-width: 768px) { .contact-grid { grid-template-columns: 1fr; } }
+
+.jotform-embed {
+  border: 1px solid var(--border); border-radius: 8px;
+  overflow: hidden; background: var(--card);
+}
+.jotform-embed iframe {
+  width: 100%; height: 520px; border: none; display: block;
+}
+
+.chatbot-panel {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 8px; overflow: hidden;
+}
+.chatbot-header {
+  background: var(--maroon); color: #FFD700;
+  padding: 1rem 1.25rem; font-weight: 600; font-size: 1rem;
+}
+.chatbot-body { height: 430px; display: flex; flex-direction: column; }
+.chatbot-messages {
+  flex: 1; padding: 1rem; overflow-y: auto; background: var(--surface2);
+}
+.chat-msg {
+  margin-bottom: 0.75rem; max-width: 80%;
+}
+.chat-msg.bot {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 0 10px 10px 10px; padding: 0.6rem 1rem;
+  font-size: 0.9rem; color: var(--muted);
+}
+.chat-msg.user {
+  background: var(--maroon); color: #FFD700;
+  border-radius: 10px 0 10px 10px; padding: 0.6rem 1rem;
+  font-size: 0.9rem; margin-left: auto;
+}
+.chatbot-input-row {
+  display: flex; padding: 0.75rem;
+  border-top: 1px solid var(--border); gap: 0.5rem;
+}
+.chatbot-input {
+  flex: 1; padding: 8px 14px; font-size: 0.9rem;
+  font-family: 'EB Garamond', serif;
+  border: 1px solid var(--border2); border-radius: 6px;
+  background: var(--surface); color: var(--ink); outline: none;
+}
+.chatbot-send {
+  padding: 8px 18px; background: var(--saffron); color: #fff;
+  border: none; border-radius: 6px; cursor: pointer;
+  font-family: 'EB Garamond', serif; font-weight: 600;
+  transition: background 0.2s;
+}
+.chatbot-send:hover { background: var(--maroon); }
+
+/* ═══ BADGE ═══ */
+.badge {
+  display: inline-block; padding: 2px 10px; border-radius: 10px;
+  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.04em;
+}
+.badge-saffron { background: var(--saffron-light); color: var(--saffron); }
+.badge-teal { background: var(--teal-light); color: var(--teal); }
+.badge-maroon { background: var(--maroon-light); color: var(--maroon); }
+.badge-gold { background: var(--gold-light); color: var(--gold); }
+
+/* ═══ ALANKARA MODULE ═══ */
+.alankara-row {
+  display: flex; align-items: flex-start; gap: 1rem;
+  padding: 1rem; border-bottom: 1px solid var(--border);
+}
+.alankara-row:last-child { border-bottom: none; }
+.alankara-num {
+  min-width: 32px; height: 32px; border-radius: 50%;
+  background: var(--maroon); color: #FFD700;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem; font-weight: 600; flex-shrink: 0;
+}
+.alankara-content h4 { font-size: 1rem; font-weight: 600; color: var(--maroon); margin-bottom: 0.25rem; }
+.alankara-content .pattern {
+  font-family: monospace; background: var(--surface2);
+  padding: 2px 8px; border-radius: 4px; font-size: 0.85rem;
+  color: var(--saffron); display: inline-block; margin-bottom: 0.4rem;
+}
+.alankara-content p { font-size: 0.9rem; color: var(--muted); }
+
+/* ═══ FOOTER ═══ */
+footer {
+  background: #2C0E0E; color: rgba(255,220,150,0.6);
+  text-align: center; padding: 2rem; font-size: 0.85rem; margin-top: 3rem;
+}
+footer a { color: rgba(255,220,150,0.8); text-decoration: none; }
+footer a:hover { color: #FFD700; }
+footer .footer-om {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 2rem; color: rgba(255,215,0,0.4); display: block; margin-bottom: 0.5rem;
+}
+
+/* ═══ SHANKARACHARYA SPECIFIC ═══ */
+.shankara-quote {
+  background: linear-gradient(135deg, #3A0A0A 0%, #5C1A00 100%);
+  color: rgba(255,220,150,0.9); border-radius: 8px;
+  padding: 1.75rem; margin: 1.5rem 0; position: relative;
+}
+.shankara-quote::before {
+  content: '"'; font-size: 6rem; color: rgba(255,215,0,0.1);
+  position: absolute; top: -1rem; left: 1rem;
+  font-family: 'Libre Baskerville', serif; line-height: 1;
+}
+.shankara-quote .verse {
+  font-family: 'Noto Serif Devanagari', serif;
+  font-size: 1.05rem; line-height: 2; margin-bottom: 0.75rem;
+}
+.shankara-quote .translation { font-style: italic; opacity: 0.8; font-size: 0.95rem; }
+.shankara-quote .source { font-size: 0.78rem; opacity: 0.55; margin-top: 0.5rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 600px) {
+  .site-header h1 { font-size: 1.5rem; }
+  .svara-grid { grid-template-columns: repeat(4, 1fr); }
+  .beeja-grid { grid-template-columns: repeat(3, 1fr); }
+  .nav-tab { padding: 0.75rem 0.9rem; font-size: 0.75rem; }
+  .container { padding: 1.5rem 1rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════ HEADER ═══════════════════════════════════════ -->
+<header class="site-header">
+  <span class="header-om">ॐ</span>
+  <h1>NadaBrahman — The Living Cosmos</h1>
+  <p class="tagline">Sanskrit · Sound · Philosophy · Music · Cosmos — A Deep Cross-Reference</p>
+  <p class="subtitle">Enhancement Layer III · Saptasvara · Beejaksharas · Rāga Creation · Philosophical Viewpoints · Shankaracharya's Sound Metaphysics</p>
+  <a href="https://nadabrahmansktadv2.culturalmusings.com" class="back-link">← Return to Sanskrit Layer II</a>
+</header>
+
+<!-- ═══════════════════════════════════════ NAV ═══════════════════════════════════════ -->
+<nav class="nav-wrap" role="navigation" aria-label="Main navigation">
+  <div class="nav-scroll">
+    <button class="nav-tab active" onclick="showPanel('saptasvara')">Saptasvara & Sanskrit</button>
+    <button class="nav-tab" onclick="showPanel('beejakshara')">Beejaksharas</button>
+    <button class="nav-tab" onclick="showPanel('raga')">Rāga Creation</button>
+    <button class="nav-tab" onclick="showPanel('philosophy')">Advaita · Dvaita · Shankarācharya</button>
+    <button class="nav-tab" onclick="showPanel('alankara')">Alaṃkāra · Tillānā · Musical Forms</button>
+    <button class="nav-tab" onclick="showPanel('viewpoints')">Multi-Viewpoint Analysis</button>
+    <button class="nav-tab" onclick="showPanel('network')">Cultural Musings Network</button>
+    <button class="nav-tab" onclick="showPanel('contact')">Connect · Enquire</button>
+  </div>
+</nav>
+
+<main class="container">
+
+<!-- ═══════════════════════════════════════ PANEL 1: SAPTASVARA ═══════════════════════════════════════ -->
+<section class="panel active" id="panel-saptasvara">
+  <div class="section-head">
+    <span class="sanskrit-title">सप्तस्वर — नादब्रह्म — संस्कृत</span>
+    <h2>Saptasvara & Sanskrit — The Seven-Note Universe</h2>
+    <p>How Sa Re Ga Ma Pa Da Ni encode the entire cosmos in sound — cross-referenced with Sanskrit phonology, chakras, beejaksharas, philosophy, and ancient rishis</p>
+  </div>
+
+  <div class="card card-accent">
+    <h3>The Molecular Bond: Sanskrit Phonemes ↔ Musical Notes</h3>
+    <p>The Saptasvara (seven musical notes) are not merely a musical scale. In the Sanskrit tradition, they are the seven fundamental frequencies through which Brahman — the Absolute — expressed the cosmos into existence. Each svara corresponds to a specific Sanskrit vowel cluster, a specific point of articulatory anatomy (Sthāna), a specific chakra, a specific deity, and a specific raga family. The ancient rishis discovered these correspondences not through music theory, but through deep samādhi — states of direct perception.</p>
+    <p>The word <em>svara</em> (स्वर) itself comes from √<em>svar</em> (to shine, to sound). These are not notes in the Western tempered scale — they are living vibrational frequencies that, when sung correctly, literally vibrate specific glands, nerve plexuses, and energy centres in the human body. This is not metaphor. It is physiology expressed through ancient Sanskrit science.</p>
+    <p>The cross-connection between Sanskrit phonemes and the Saptasvara was first systematically documented in the <em>Nāradīya Śikṣā</em> and the <em>Saṃgīta Ratnākara</em> of Śārṅgadeva (13th century CE), and reaches its deepest articulation in the <em>Bṛhaddeśī</em> of Mataṅga Muni. The connection runs through the vowels (svaras in Sanskrit grammar are literally called <em>svara</em> — the same word as musical note) and through the consonants whose resonance chambers mirror the seven musical pitch levels.</p>
+  </div>
+
+  <div class="shloka">
+    <div class="verse">षड्जो वायसकण्ठेन ऋषभो वृषभस्वनः।<br>गान्धारो बकवच्चैव मध्यमो क्रौञ्चभाषितः॥<br>पञ्चमः कोकिलाभाषी धैवतो हंसभाषितः।<br>निषादस्त्वथ हस्त्येव सप्त स्वरा मृगेभिरुत्पन्नाः॥</div>
+    <div class="translation">Ṣaḍja from the crow's throat; Ṛṣabha from the bull's call; Gāndhāra from the goat; Madhyama from the crane; Pañcama from the cuckoo; Dhaivata from the swan; Niṣāda from the elephant — thus the seven svaras arose from the sounds of living creatures.</div>
+    <div class="source">Nāradīya Śikṣā · c. 1st century CE</div>
+  </div>
+
+  <p style="color:var(--muted); margin-bottom:1rem; font-size:0.9rem;">Click any svara below to explore its complete Sanskrit cross-reference:</p>
+
+  <div class="svara-grid">
+    <div class="svara-cell active" onclick="showSvara('sa')">
+      <span class="svara-devanagari">स</span>
+      <span class="svara-roman">Sa</span>
+      <span class="svara-freq">Ṣaḍja</span>
+    </div>
+    <div class="svara-cell" onclick="showSvara('re')">
+      <span class="svara-devanagari">रे</span>
+      <span class="svara-roman">Re</span>
+      <span class="svara-freq">Ṛṣabha</span>
+    </div>
+    <div class="svara-cell" onclick="showSvara('ga')">
+      <span class="svara-devanagari">ग</span>
+      <span class="svara-roman">Ga</span>
+      <span class="svara-freq">Gāndhāra</span>
+    </div>
+    <div class="svara-cell" onclick="showSvara('ma')">
+      <span class="svara-devanagari">म</span>
+      <span class="svara-roman">Ma</span>
+      <span class="svara-freq">Madhyama</span>
+    </div>
+    <div class="svara-cell" onclick="showSvara('pa')">
+      <span class="svara-devanagari">प</span>
+      <span class="svara-roman">Pa</span>
+      <span class="svara-freq">Pañcama</span>
+    </div>
+    <div class="svara-cell" onclick="showSvara('da')">
+      <span class="svara-devanagari">ध</span>
+      <span class="svara-roman">Da</span>
+      <span class="svara-freq">Dhaivata</span>
+    </div>
+    <div class="svara-cell" onclick="showSvara('ni')">
+      <span class="svara-devanagari">नि</span>
+      <span class="svara-roman">Ni</span>
+      <span class="svara-freq">Niṣāda</span>
+    </div>
+  </div>
+
+  <div id="svara-detail" class="svara-detail active"></div>
+
+  <div class="card" style="margin-top:2rem;">
+    <h3>The Vowels (Svaras) of Sanskrit Grammar & Musical Notes — The Deep Cross-Reference</h3>
+    <p>In Sanskrit grammar, vowels are called <em>svara</em> — identical to the term for musical note. This is not coincidence. Pāṇini's grammar classifies vowels as <em>ac</em> (the 14 sounds designated by his Śiva Sūtras: a, i, u, ṛ, ḷ, e, o, ai, au, and their long forms). Each of these vowel-sounds corresponds to a specific resonance cavity in the human vocal apparatus, and each cavity corresponds to a musical pitch range.</p>
+    <p>The ancient grammarian Nāgeśabhaṭṭa in his <em>Paribhāṣenduśekhara</em> notes that the articulation of Sanskrit vowels inherently produces the seven musical pitches — that a fully trained Sanskrit reciter (who has mastered <em>udātta</em>, <em>anudātta</em>, and <em>svarita</em> tones) is simultaneously a trained musician. The three Vedic tonal accents — high (udātta), low (anudātta), and oscillating (svarita) — are the embryonic form of the full seven-note scale.</p>
+
+    <table class="xref-table" style="margin-top:1rem;">
+      <thead>
+        <tr>
+          <th>Svara</th>
+          <th>Sanskrit Grammar</th>
+          <th>Articulation Point</th>
+          <th>Chakra</th>
+          <th>Element</th>
+          <th>Rāga Family</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="devanagari-cell">स</span> Sa · Ṣaḍja</td>
+          <td>Short 'a' vowel · anudātta base</td>
+          <td>Kṛkāṭikā (throat-chest junction)</td>
+          <td>Mūlādhāra (Root)</td>
+          <td>Earth · Pṛthvī</td>
+          <td>Bhairavī, Bhairav, Bilaval</td>
+        </tr>
+        <tr>
+          <td><span class="devanagari-cell">रे</span> Re · Ṛṣabha</td>
+          <td>'ṛ' vowel (retroflex vocalic) · anudātta</td>
+          <td>Hṛdaya (cardiac plexus)</td>
+          <td>Svādhiṣṭhāna (Sacral)</td>
+          <td>Water · Jala</td>
+          <td>Bhairav, Todi, Marwa</td>
+        </tr>
+        <tr>
+          <td><span class="devanagari-cell">ग</span> Ga · Gāndhāra</td>
+          <td>'i' vowel (palatal) · anudātta</td>
+          <td>Śiras (cranial resonance)</td>
+          <td>Maṇipūra (Solar Plexus)</td>
+          <td>Fire · Agni</td>
+          <td>Kalyāṇ, Yaman, Khamāj</td>
+        </tr>
+        <tr>
+          <td><span class="devanagari-cell">म</span> Ma · Madhyama</td>
+          <td>'u' vowel (labial) · udātta centre</td>
+          <td>Nābhi (navel plexus)</td>
+          <td>Anāhata (Heart)</td>
+          <td>Air · Vāyu</td>
+          <td>Kāfī, Sāraṅg, Deś</td>
+        </tr>
+        <tr>
+          <td><span class="devanagari-cell">प</span> Pa · Pañcama</td>
+          <td>Long 'ā' vowel · svarita pivot</td>
+          <td>Mukha (oral resonance)</td>
+          <td>Viśuddha (Throat)</td>
+          <td>Space · Ākāśa</td>
+          <td>Bhairavī, Pīlū, Kāfī</td>
+        </tr>
+        <tr>
+          <td><span class="devanagari-cell">ध</span> Da · Dhaivata</td>
+          <td>'e' diphthong vowel · udātta</td>
+          <td>Lalāṭa (frontal sinus)</td>
+          <td>Ājñā (Third Eye)</td>
+          <td>Mind · Manas</td>
+          <td>Bhairav, Āsāvarī, Bhairavī</td>
+        </tr>
+        <tr>
+          <td><span class="devanagari-cell">नि</span> Ni · Niṣāda</td>
+          <td>'au' diphthong · udātta pinnacle</td>
+          <td>Mūrdhā (cranial vault)</td>
+          <td>Sahasrāra (Crown)</td>
+          <td>Consciousness · Cit</td>
+          <td>Bhairav, Todi, Kalyāṇ</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="grid-2" style="margin-top:1.5rem;">
+    <div class="card card-teal">
+      <h3>The Komal (Flat) Variants</h3>
+      <p><strong>Komal Re (Flat Re):</strong> Touches Ṛkāra — the vocalic 'ṛ' of Sanskrit. Used in ragas of deep introspection: Bhairav, Todi, Āsāvarī. Physiologically stimulates the adrenal region.</p>
+      <p><strong>Komal Ga (Flat Ga):</strong> Corresponds to the Sanskrit 'i' (short) vowel. Present in ragas of devotion and tenderness: Bhairavī, Kāfī. Activates the Anāhata chest resonance when sustained.</p>
+      <p><strong>Komal Dha (Flat Dha):</strong> Touches the Sanskrit 'e' vowel in its falling inflection. Used in ragas of emotional complexity: Bhairav, Āsāvarī. Creates parasympathetic calming.</p>
+      <p><strong>Komal Ni (Flat Ni):</strong> Corresponds to Sanskrit's 'o' vowel. Present in ragas of night and longing: Bhairavī, Kāfī, Pīlū. Associated with the descending Apāna breath.</p>
+    </div>
+    <div class="card card-gold">
+      <h3>The Tīvra (Sharp) Variant</h3>
+      <p><strong>Tīvra Ma (Sharp Ma):</strong> The only raised (tīvra) svara in the system. Corresponds to Sanskrit's 'au' diphthong in its rising inflection — the sound of wonder and expansion. Present in the Kalyāṇ thāt family: Yaman, Yaman Kalyāṇ, Śyām Kalyāṇ, Bhūpālī. This single note is said to represent the upward movement of prāṇa — the moment of transcendence from earth to sky.</p>
+      <p>In the Advaita philosophical framework, Tīvra Ma represents the razor's edge between the manifest (vyakta) and unmanifest (avyakta) — the point at which musical sound touches the silence from which it emerged.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ PANEL 2: BEEJAKSHARA ═══════════════════════════════════════ -->
+<section class="panel" id="panel-beejakshara">
+  <div class="section-head">
+    <span class="sanskrit-title">बीजाक्षर — शक्ति — नाद</span>
+    <h2>Beejaksharas — Seed Syllables of Creation</h2>
+    <p>The sonic bodies of deities and cosmic forces — each beejakshara cross-referenced with its svara, chakra, deity, philosophy, and physiological resonance</p>
+  </div>
+
+  <div class="card card-accent">
+    <h3>Why Sanskrit is the Only Vehicle for Beejaksharas</h3>
+    <p>A beejakshara (बीजाक्षर) is not a symbol representing a sound. It <em>is</em> the sound — in precisely the same way that in Advaita Vedānta, the word "fire" is not separate from fire at the deepest level of reality. The Sanskrit tradition holds that the universe itself is a linguistic act — Śabda Brahman — and beejaksharas are the most concentrated, most potent points of that linguistic cosmos.</p>
+    <p>Shankarāchārya's commentary on the Brahmasūtras establishes that Śabda (sound) and Artha (meaning) are non-different at the level of Sphoṭa — Bhartrhari's foundational concept. A beejakshara does not point to a deity — it <em>is</em> that deity's sonic form (nāda-rūpa). The correct pronunciation therefore literally invokes that cosmic frequency into the space of the chanter's body and consciousness.</p>
+    <p>The cross-connection with Saptasvara is direct and molecular: each major beejakshara is pitched on a specific svara, creating its resonance in a specific part of the body, activating a specific chakra. This is why the tradition insists on Guru transmission — the pitch, the duration, and the specific articulatory emphasis cannot be conveyed in written form alone.</p>
+  </div>
+
+  <p style="color:var(--muted); margin-bottom:1rem; font-size:0.9rem;">Select a beejakshara for deep cross-reference:</p>
+
+  <div class="beeja-grid">
+    <div class="beeja-cell active" onclick="showBeeja('om')"><span class="b-sanskrit">ॐ</span><span class="b-name">Om</span></div>
+    <div class="beeja-cell" onclick="showBeeja('hreem')"><span class="b-sanskrit">ह्रीं</span><span class="b-name">Hrīṃ</span></div>
+    <div class="beeja-cell" onclick="showBeeja('kleem')"><span class="b-sanskrit">क्लीं</span><span class="b-name">Klīṃ</span></div>
+    <div class="beeja-cell" onclick="showBeeja('aim')"><span class="b-sanskrit">ऐं</span><span class="b-name">Aiṃ</span></div>
+    <div class="beeja-cell" onclick="showBeeja('sreem')"><span class="b-sanskrit">श्रीं</span><span class="b-name">Śrīṃ</span></div>
+    <div class="beeja-cell" onclick="showBeeja('kreem')"><span class="b-sanskrit">क्रीं</span><span class="b-name">Krīṃ</span></div>
+    <div class="beeja-cell" onclick="showBeeja('gam')"><span class="b-sanskrit">गं</span><span class="b-name">Gaṃ</span></div>
+    <div class="beeja-cell" onclick="showBeeja('dum')"><span class="b-sanskrit">दुं</span><span class="b-name">Duṃ</span></div>
+    <div class="beeja-cell" onclick="showBeeja('hum')"><span class="b-sanskrit">हूं</span><span class="b-name">Hūṃ</span></div>
+    <div class="beeja-cell" onclick="showBeeja('lam')"><span class="b-sanskrit">लं</span><span class="b-name">Laṃ</span></div>
+    <div class="beeja-cell" onclick="showBeeja('vam')"><span class="b-sanskrit">वं</span><span class="b-name">Vaṃ</span></div>
+    <div class="beeja-cell" onclick="showBeeja('ram')"><span class="b-sanskrit">रं</span><span class="b-name">Raṃ</span></div>
+  </div>
+
+  <div id="beeja-detail" class="beeja-detail active"></div>
+
+  <div class="card" style="margin-top:2rem;">
+    <h3>The Chakra Beejakshara System — Complete Cross-Reference</h3>
+    <p>Each of the seven primary chakras is governed by a specific beejakshara, a specific svara, a specific Sanskrit vowel, a specific element, and a specific number of petals. This is the complete molecular map of the human subtle body expressed through Sanskrit sound:</p>
+
+    <table class="xref-table" style="margin-top:1rem;">
+      <thead>
+        <tr><th>Chakra</th><th>Beejakshara</th><th>Svara</th><th>Petals</th><th>Element</th><th>Deity</th><th>Physiological Region</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Mūlādhāra · Root</td><td class="devanagari-cell">लं</td><td>Sa (Ṣaḍja)</td><td>4</td><td>Earth</td><td>Gaṇeśa / Ḍākinī</td><td>Perineum · Sacral plexus</td></tr>
+        <tr><td>Svādhiṣṭhāna · Sacral</td><td class="devanagari-cell">वं</td><td>Re (Ṛṣabha)</td><td>6</td><td>Water</td><td>Brahmā / Rākinī</td><td>Lower abdomen · Hypogastric plexus</td></tr>
+        <tr><td>Maṇipūra · Solar</td><td class="devanagari-cell">रं</td><td>Ga (Gāndhāra)</td><td>10</td><td>Fire</td><td>Viṣṇu / Lākinī</td><td>Solar plexus · Coeliac plexus</td></tr>
+        <tr><td>Anāhata · Heart</td><td class="devanagari-cell">यं</td><td>Ma (Madhyama)</td><td>12</td><td>Air</td><td>Śiva / Kākinī</td><td>Cardiac plexus · Vagus nerve</td></tr>
+        <tr><td>Viśuddha · Throat</td><td class="devanagari-cell">हं</td><td>Pa (Pañcama)</td><td>16</td><td>Space</td><td>Sadāśiva / Śākinī</td><td>Laryngeal plexus · Thyroid</td></tr>
+        <tr><td>Ājñā · Third Eye</td><td class="devanagari-cell">ॐ</td><td>Da (Dhaivata)</td><td>2</td><td>Mind</td><td>Paramaśiva / Hākinī</td><td>Pituitary · Cavernous plexus</td></tr>
+        <tr><td>Sahasrāra · Crown</td><td class="devanagari-cell">विसर्ग:</td><td>Ni (Niṣāda)</td><td>1000</td><td>Consciousness</td><td>Brahman · Yākinī</td><td>Pineal · Cortical surface</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ PANEL 3: RAGA CREATION ═══════════════════════════════════════ -->
+<section class="panel" id="panel-raga">
+  <div class="section-head">
+    <span class="sanskrit-title">राग — मेलकर्ता — ठाट</span>
+    <h2>Rāga Creation & Exploration</h2>
+    <p>Explore the living science of rāga — search, compose, and understand the Sanskrit roots of Indian classical music</p>
+  </div>
+
+  <input type="text" class="raga-search-bar" id="ragaSearch" placeholder="Search rāgas by name, time, mood, or thāt..." oninput="filterRagas()">
+
+  <div class="raga-filters">
+    <button class="raga-filter-btn active" onclick="filterByThaat('all', this)">All Rāgas</button>
+    <button class="raga-filter-btn" onclick="filterByThaat('bhairav', this)">Bhairav</button>
+    <button class="raga-filter-btn" onclick="filterByThaat('bilaval', this)">Bilāval</button>
+    <button class="raga-filter-btn" onclick="filterByThaat('kalyan', this)">Kalyāṇ</button>
+    <button class="raga-filter-btn" onclick="filterByThaat('bhairavi', this)">Bhairavī</button>
+    <button class="raga-filter-btn" onclick="filterByThaat('kafi', this)">Kāfī</button>
+    <button class="raga-filter-btn" onclick="filterByThaat('asavari', this)">Āsāvarī</button>
+    <button class="raga-filter-btn" onclick="filterByThaat('todi', this)">Toḍī</button>
+    <button class="raga-filter-btn" onclick="filterByThaat('purvi', this)">Pūrvī</button>
+    <button class="raga-filter-btn" onclick="filterByThaat('marwa', this)">Mārwā</button>
+    <button class="raga-filter-btn" onclick="filterByThaat('khamaj', this)">Khāmāj</button>
+  </div>
+
+  <div class="raga-list" id="ragaList"></div>
+
+  <div class="card card-teal" style="margin-top:2rem;">
+    <h3>Rāga Database — External Reference Sources</h3>
+    <p>For deeper exploration, search these authoritative databases:</p>
+    <div class="grid-2" style="margin-top:1rem; gap:0.75rem;">
+      <a href="https://ragajunglism.org/ragas/masterlist" target="_blank" class="network-card">
+        <span class="nc-name">Rāga Junglism Masterlist</span>
+        <span class="nc-url">ragajunglism.org</span>
+        <span class="nc-desc">1000+ Hindustani rāgas with complete svarā documentation</span>
+      </a>
+      <a href="https://melakarta.com" target="_blank" class="network-card">
+        <span class="nc-name">Melakarta Chart</span>
+        <span class="nc-url">melakarta.com</span>
+        <span class="nc-desc">Complete 72 Melakarta system for Carnatic music</span>
+      </a>
+      <a href="https://ragamath.com" target="_blank" class="network-card">
+        <span class="nc-name">RagaMath</span>
+        <span class="nc-url">ragamath.com</span>
+        <span class="nc-desc">Mathematical analysis of rāga structures and relationships</span>
+      </a>
+      <a href="https://web-harmonium.com/harmonium-notes" target="_blank" class="network-card">
+        <span class="nc-name">Harmonium Sargam Guide</span>
+        <span class="nc-url">web-harmonium.com</span>
+        <span class="nc-desc">Practical sargam notation for composition</span>
+      </a>
+      <a href="https://computationalmusic.com/raga-classification-system.html" target="_blank" class="network-card">
+        <span class="nc-name">Rāga Classification System</span>
+        <span class="nc-url">computationalmusic.com</span>
+        <span class="nc-desc">Scientific classification and computational analysis</span>
+      </a>
+      <a href="https://amitray.com/the-84-ragas-of-indian-classical-music-a-complete-guide" target="_blank" class="network-card">
+        <span class="nc-name">84 Rāgas — Complete Guide</span>
+        <span class="nc-url">amitray.com</span>
+        <span class="nc-desc">In-depth guide to the 84 primary rāgas of Indian classical music</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:1.5rem;">
+    <h3>Rāga Composition Framework — The Sanskrit Grammar of Music</h3>
+    <p>In the Sanskrit tradition, composing a rāga is not composition in the Western sense. It is <em>discovery</em> — the uncovering of a pre-existing cosmic frequency that exists eternally in the fabric of reality. The ancient texts describe rāgas as <em>deva-nirmita</em> (deity-created) — the musician is the revealer, not the creator.</p>
+    <p>A rāga is defined by six essential Sanskrit parameters, each with precise technical terminology from the Saṃgīta Ratnākara:</p>
+    <div class="grid-2" style="margin-top:1rem;">
+      <div class="card-accent card" style="margin-bottom:0">
+        <h4>Āroha (आरोह) — Ascent</h4>
+        <p>The ascending svara sequence from Sa to Ni. Not all seven notes need be present — the specific pattern of included and omitted svaras defines the rāga's identity on the way up.</p>
+        <h4>Avaroha (अवरोह) — Descent</h4>
+        <p>The descending sequence from Ni to Sa. Often differs from the āroha — this asymmetry is one of the most distinctive features of rāga grammar.</p>
+        <h4>Vādī (वादी) — King Note</h4>
+        <p>The most important, most emphasised svara of the rāga — the note that carries its characteristic emotional signature. From √vad (to speak/sound).</p>
+      </div>
+      <div class="card-gold card" style="margin-bottom:0">
+        <h4>Saṃvādī (संवादी) — Minister Note</h4>
+        <p>The second most important svara — the partner of the Vādī, typically a perfect fourth or fifth away. Creates the primary consonant relationship in the rāga.</p>
+        <h4>Vivādī (विवादी) — Enemy Note</h4>
+        <p>The svara that is dissonant or avoided in the rāga. Its deliberate use (rarely, carefully) creates dramatic tension — like a forbidden thought entering meditation.</p>
+        <h4>Anuvādī (अनुवादी) — Servant Notes</h4>
+        <p>All remaining svaras that support the Vādī and Saṃvādī — present but not dominant. The democratic chorus of the rāga's sonic ecosystem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ PANEL 4: PHILOSOPHY ═══════════════════════════════════════ -->
+<section class="panel" id="panel-philosophy">
+  <div class="section-head">
+    <span class="sanskrit-title">अद्वैत · द्वैत · शङ्करमत</span>
+    <h2>Advaita · Dvaita · Shankarāchārya's Sound Metaphysics</h2>
+    <p>How the great philosophical traditions used sound, Saptasvara, and Sanskrit as direct proof of metaphysical truth</p>
+  </div>
+
+  <div class="phil-card">
+    <div class="phil-school">Advaita Vedānta · Shankarāchārya · 8th Century CE</div>
+    <h3>Sound as the Proof of Non-Duality</h3>
+    <p>Shankarāchārya's philosophical genius lay in using the phenomenon of sound itself as the most accessible demonstration of Advaita (non-duality). In his commentary on the Brahmasūtras (Brahmasūtrabhāṣya), he argues: when you hear a musical note — say, Pañcama (Pa) in the rāga Yaman — the sound that reaches your ear is not separate from the consciousness that perceives it. The hearer, the heard, and the act of hearing are ultimately one movement of Brahman.</p>
+    <p>This is not mere philosophy. Shankarāchārya demonstrates it through the concept of <em>Sphoṭa</em> — the indivisible meaning-bearing sound-unit that Bhartrhari had established. If sound and consciousness were truly separate, the Sphoṭa could not exist — meaning could not arise from mere physical vibration unless consciousness was already present within the vibration. This is Advaita's contribution to the science of sound: matter and awareness are not two.</p>
+    <div class="shankara-quote">
+      <div class="verse">शब्दब्रह्मणि निष्णातः परं ब्रह्माधिगच्छति।<br>नादेन व्यज्यते वाचो महिमा यः श्रुतौ श्रुतः॥</div>
+      <div class="translation">One who is deeply immersed in Śabda Brahman (Sound as the Absolute) attains the Supreme Brahman. Through Nāda (sound) is revealed the glory of speech that is heard in the Śruti.</div>
+      <div class="source">Attributed to Shankarāchārya · cf. Brahmasūtrabhāṣya commentary tradition</div>
+    </div>
+    <p>In his <em>Soundaryalaharī</em> — the 100-verse hymn to the Goddess that is simultaneously a complete manual of mantra, yantra, and Nāda science — Shankarāchārya uses musical metaphors throughout. The first verse describes the relationship between Śiva (pure consciousness) and Śakti (the dynamic power of creation) as exactly the relationship between a musical drone (ṣaḍja) and its overtone series — one sound, one source, apparently many, actually non-different.</p>
+    <p>The <em>Vivekacūḍāmaṇi</em> (Crest-Jewel of Discrimination) employs the analogy of the seven musical notes to explain how Brahman appears as the multiplicity of the world: just as a single string vibrating at different frequencies produces Sa, Re, Ga, Ma, Pa, Da, Ni — all apparently different notes but all arising from one vibrating source and one listening consciousness — so Brahman, the single underlying reality, appears as the apparent multiplicity of names and forms. The notes do not create themselves; they are the one string's self-expression. The world does not create itself; it is Brahman's self-expression.</p>
+  </div>
+
+  <div class="phil-card">
+    <div class="phil-school">Dvaita Vedānta · Madhvāchārya · 13th Century CE</div>
+    <h3>Sound as the Evidence of Divine Distinction</h3>
+    <p>Where Shankarāchārya's Advaita sees sound as the proof of non-duality, Madhvāchārya's Dvaita Vedānta — the philosophy of fundamental distinction between the individual soul (jīva), the world (jagat), and the Supreme Being (Brahman-Viṣṇu) — uses the Saptasvara as evidence for the richness and reality of difference.</p>
+    <p>Madhvāchārya's insight is musicological: if all seven notes were ultimately the same, music would not exist. The beauty, the rasa, the transformative power of Carnatic classical music — which his tradition deeply valued — depends entirely on the <em>reality</em> of the differences between Sa, Re, Ga, Ma, Pa, Da, Ni. To collapse them into sameness is not liberation; it is the destruction of music itself.</p>
+    <p>The Dvaita tradition's engagement with music is most visible in the Haridāsa movement — particularly in the compositions of Purandaradāsa (1484–1564 CE), who is considered the father of Carnatic music. Purandaradāsa's system of musical education (beginning with Māyamālavagauḷa rāga) is itself a Dvaita theological statement: the multiplicity of ragas reflects the infinite, real, distinct glories of Viṣṇu's creation. The musician does not transcend the notes — the musician lovingly differentiates them, as a devotee lovingly perceives the distinct qualities of the divine.</p>
+    <div class="shankara-quote">
+      <div class="verse">भेदस्य सत्यता एव ब्रह्मणो महिमा।<br>नादे नादे विशेषश्च तस्यैव प्रकटीकरणम्॥</div>
+      <div class="translation">The reality of difference is itself the glory of Brahman. In each sound and each sound's distinction is His own self-revelation.</div>
+      <div class="source">Madhva Vedānta tradition · summarising the theological basis of Haridāsa music</div>
+    </div>
+  </div>
+
+  <div class="phil-card">
+    <div class="phil-school">Viśiṣṭādvaita · Rāmānujāchārya · 11th–12th Century CE</div>
+    <h3>Sound as Qualified Non-Duality — The Musical Middle Path</h3>
+    <p>Rāmānujāchārya's Viśiṣṭādvaita (Qualified Non-Duality) offers perhaps the most musically sophisticated of the three great philosophical positions. His thesis: Brahman is one, but it is not simple oneness — it is a oneness that includes its attributes (viśeṣaṇas) as real, non-separate aspects of itself. The relationship is like a rāga and its svaras: the rāga Bhairavī is one reality, but it is constituted of its specific notes (komal Re, komal Ga, komal Dha, komal Ni) which are real, distinguishable, and not other than Bhairavī itself.</p>
+    <p>This is precisely how Rāmānujāchārya describes Brahman's relationship to jīva (individual souls) and jagat (the world): they are real, they are distinguishable, but they are the body of Brahman — non-separate from Brahman in the same way that the specific svaras are non-separate from the rāga. To say the notes are "ultimately unreal" (the Advaita position as Rāmānuja characterised it) is to say Bhairavī does not really exist — only "music in general" does. But this is absurd: music in general is never heard. Only specific rāgas are heard. Only specific jīvas experience liberation.</p>
+  </div>
+
+  <div class="card card-accent" style="margin-top:1.5rem;">
+    <h3>Shankarāchārya's Specific Musical Metaphors — A Cross-Reference</h3>
+    <p>Throughout his corpus, Shankarāchārya uses specific musical analogies that become technical demonstrations of Advaita philosophy:</p>
+    <div class="grid-2" style="margin-top:1rem; gap:1rem;">
+      <div>
+        <h4>The Ṣaḍja Metaphor</h4>
+        <p>In the <em>Ātmabodha</em>, Shankarāchārya compares Brahman to the drone note Sa — always present, never moving, the ground upon which all other notes arise and to which they return. Individual consciousness (jīva) is like the melodies that appear to move away from Sa but are never actually separate from it.</p>
+      </div>
+      <div>
+        <h4>The Nāda-Bindu Metaphor</h4>
+        <p>In the Upaniṣad commentaries, Shankarāchārya refers to the Nāda-Bindu Upaniṣad's teaching that all creation emerges from the conjunction of Nāda (undifferentiated sound) and Bindu (the point of condensation). This is precisely the musical phenomenon of a struck string: the sound (nāda) condenses into a specific pitch (bindu) through the intersection of tension and vibration.</p>
+      </div>
+      <div>
+        <h4>The Āhata-Anāhata Distinction</h4>
+        <p>Shankarāchārya distinguishes between Āhata Nāda (struck sound — all audible music) and Anāhata Nāda (unstruck sound — the eternal vibration of Brahman that underlies all audible phenomena). Enlightenment, in this framework, is the recognition that all Āhata Nāda arises from and returns to Anāhata Nāda — just as all musical notes arise from and return to silence.</p>
+      </div>
+      <div>
+        <h4>The Pratīka (Symbol) in the Soundaryalaharī</h4>
+        <p>In verse 15 of the Soundaryalaharī, Shankarāchārya describes the 51 letters of the Sanskrit alphabet as the 51 Śaktis (divine powers) of the Goddess — each phoneme a deity, each phoneme a musical frequency, each phoneme a point of consciousness. This is the ultimate cross-reference: Sanskrit grammar, musical theory, and theology are one map of a single reality.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ PANEL 5: ALANKARA ═══════════════════════════════════════ -->
+<section class="panel" id="panel-alankara">
+  <div class="section-head">
+    <span class="sanskrit-title">अलंकार · तिल्लाना · गमक</span>
+    <h2>Alaṃkāra · Tillānā · Musical Ornaments</h2>
+    <p>The ornamental science of Indian classical music — where Sanskrit grammar meets musical expression in the Gamakas, Alaṃkāras, and the ecstatic Tillānā</p>
+  </div>
+
+  <div class="card card-accent">
+    <h3>Alaṃkāra — Sanskrit Grammar as Musical Ornament</h3>
+    <p>The Sanskrit word <em>alaṃkāra</em> (अलंकार) means "that which adorns" — from <em>alaṃ</em> (sufficient/adorned) + <em>kāra</em> (maker). In Sanskrit poetics (Kāvyaśāstra), Alaṃkāras are the figures of speech — metaphor, simile, alliteration, paradox — that elevate ordinary language to poetry. In Indian classical music, Alaṃkāras are the ornamental melodic patterns that elevate simple note sequences to art.</p>
+    <p>The cross-connection is not metaphorical. Bharata Muni in the Nāṭya Śāstra explicitly states that the same ornamental principles that govern Sanskrit poetry (alaṃkāra, chandas, dhvani) govern musical expression. A good Carnatic vocalist and a good Sanskrit poet are deploying the same cognitive-aesthetic technology — the structured use of pattern, variation, and resolution to create Rasa.</p>
+  </div>
+
+  <div class="card">
+    <h3>The Primary Alaṃkāras — Pattern, Philosophy, and Physiological Effect</h3>
+    <div class="alankara-row">
+      <div class="alankara-num">1</div>
+      <div class="alankara-content">
+        <h4>Alaṃkāra I — Linear Ascent/Descent (Saraḷī)</h4>
+        <div class="pattern">Sa Re Ga Ma Pa Da Ni Sa' | Sa' Ni Da Pa Ma Ga Re Sa</div>
+        <p>The foundational exercise — pure linear motion through all seven svaras. In Advaita terms: the soul's movement from Mūlādhāra (Sa/Earth) through all planes to Sahasrāra (Ni/Consciousness) and its return. Used in all Carnatic music education as the first alaṃkāra. The Sanskrit root of <em>saraḷī</em> is √sṛ (to flow) — the natural flow of sound through the body.</p>
+      </div>
+    </div>
+    <div class="alankara-row">
+      <div class="alankara-num">2</div>
+      <div class="alankara-content">
+        <h4>Alaṃkāra II — Grouped Ascent (Janta)</h4>
+        <div class="pattern">Sa Sa Re Re Ga Ga Ma Ma | Pa Pa Da Da Ni Ni Sa' Sa'</div>
+        <p>Each svara doubled. The doubling is a technique from Sanskrit Vedic recitation — the <em>japa</em> principle, where repetition deepens the vibration into the body. Each doubled note reinforces the chakra resonance of that specific svara, creating deeper physical-vibrational imprint.</p>
+      </div>
+    </div>
+    <div class="alankara-row">
+      <div class="alankara-num">3</div>
+      <div class="alankara-content">
+        <h4>Alaṃkāra III — Three-Note Groups (Dāṭu)</h4>
+        <div class="pattern">Sa Re Ga | Re Ga Ma | Ga Ma Pa | Ma Pa Da | Pa Da Ni | Da Ni Sa'</div>
+        <p>Three-note ascending groups that overlap — each group sharing its last note with the next group's first. This is the musical equivalent of the Sanskrit <em>anuprāsa</em> (alliteration) — the overlapping sound-pattern creates a rolling, wave-like momentum. In yogic terms, this pattern activates the Prāṇa's movement through three consecutive chakras simultaneously, creating <em>spanda</em> (vibration) throughout the subtle body.</p>
+      </div>
+    </div>
+    <div class="alankara-row">
+      <div class="alankara-num">4</div>
+      <div class="alankara-content">
+        <h4>Gamakas — The Art of Oscillation</h4>
+        <div class="pattern">〜Re〜 〜Ga〜 〜Ma〜 (oscillating grace notes)</div>
+        <p>Gamaka (from √gam, to go) are the microtonal ornamental oscillations that distinguish Carnatic from Hindustani music and both from Western music. A gamaka is not a vibrato — it is a specific controlled oscillation between two svaras, each oscillation pattern having a Sanskrit name: <em>Kampita</em> (trembling), <em>Āndolita</em> (swinging), <em>Jāru</em> (sliding), <em>Raṃphita</em> (striking). The gamaka science is Sanskrit phonological science applied to pitch — the same microtonal awareness that distinguishes Sanskrit's retroflex sounds from dental sounds, applied to musical pitch rather than articulation.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-teal" style="margin-top:1.5rem;">
+    <h3>Tillānā — The Ecstatic Summit of Carnatic Form</h3>
+    <p>The Tillānā (तिल्लाना) — known as Tarana in Hindustani music — is the ecstatic, rhythmically complex concluding piece of a Carnatic concert or dance performance. Its distinguishing feature: the vocal text is composed entirely of <em>sollukaṭṭu</em> (rhythmic syllables) and meaningless Sanskrit phoneme clusters — Taṃ, Dhim, Nā, Tā, Dhere, Kiṭa, Ṭhom — rather than words with conventional meaning.</p>
+    <p>This is the most philosophically interesting musical form in the entire Sanskrit tradition. By stripping away denotative meaning and returning to pure phoneme, pure rhythm, pure sound — the Tillānā enacts Bhartrhari's Sphoṭa theory. When the syllables cease to mean anything, they mean everything. When language returns to pure Nāda, it touches Śabda Brahman — the Absolute as undifferentiated Sound.</p>
+    <p>Shankarāchārya's Advaita philosophy provides the deepest gloss on the Tillānā: ordinary music moves from silence (Brahman) → through language (māyā/appearance) → toward meaning (vyavahāra/conventional reality). The Tillānā reverses this journey: it begins in apparent language and dissolves back into pure sound — Nāda — returning consciousness to its source. Every great Tillānā is a guided meditation disguised as a performance.</p>
+    <div style="margin-top:1rem; background:rgba(255,255,255,0.1); border-radius:6px; padding:1rem;">
+      <p style="color:rgba(255,255,255,0.8); font-style:italic; margin:0;">"In the Tillānā, the dancer and the audience are not experiencing a performance. They are experiencing the moment when the universe forgets it is performing and becomes, briefly, itself."</p>
+      <p style="color:rgba(255,255,255,0.5); font-size:0.82rem; margin-top:0.5rem;">— Balasaraswati · Master Bharatanāṭyam Exponent · 1918–1984</p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:1.5rem;">
+    <h3>The Seven Svaras as Alaṃkāras in Shankarāchārya's Soundaryalaharī</h3>
+    <p>In verses 14–15 of the Soundaryalaharī, Shankarāchārya explicitly maps the 51 letters of the Sanskrit alphabet to the garland of the Goddess. Many scholars have observed that this mapping corresponds directly to the 51 notes of the two Carnatic scales (36 notes in the 12 śrutis of both octaves, plus the 15 svarasthānas). This would make the Soundaryalaharī not just a hymn but a complete musical theoretical treatise encoded in theological language.</p>
+    <p>Each of the Goddess's 51 Sanskrit-letter garland beads is simultaneously: a Sanskrit phoneme, a musical pitch, a point of anatomical resonance, a deity, and a cosmic principle. The Soundaryalaharī, read through this lens, is the most complete single cross-reference document connecting Sanskrit, music, anatomy, theology, and cosmology in the entire tradition.</p>
+    <a href="https://shlokam.org/shloka/lalitha-sahasranamam.htm" target="_blank" class="raga-source-link">→ Lalitā Sahasranāmam — Kamakoti Reference</a>&nbsp;&nbsp;
+    <a href="https://www.kamakoti.org" target="_blank" class="raga-source-link">→ Kamakoti.org — Complete Soundaryalaharī</a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ PANEL 6: VIEWPOINTS ═══════════════════════════════════════ -->
+<section class="panel" id="panel-viewpoints">
+  <div class="section-head">
+    <span class="sanskrit-title">दृष्टिकोण — विज्ञान — आत्मा</span>
+    <h2>Multi-Viewpoint Analysis of Sanskrit Sound</h2>
+    <p>The same truth seen through six lenses — Yogic · Spiritual · Neurological · Scientific · Astrophysics · Philosophical</p>
+  </div>
+
+  <div class="vp-tabs">
+    <button class="vp-tab active" onclick="showVP('yogic')">Yogic Viewpoint</button>
+    <button class="vp-tab" onclick="showVP('spiritual')">Spiritual Viewpoint</button>
+    <button class="vp-tab" onclick="showVP('neurological')">Neurological Viewpoint</button>
+    <button class="vp-tab" onclick="showVP('scientific')">Scientific Viewpoint</button>
+    <button class="vp-tab" onclick="showVP('astrophysics')">Astrophysics Viewpoint</button>
+    <button class="vp-tab" onclick="showVP('philosophical')">Philosophical Viewpoint</button>
+  </div>
+
+  <div class="vp-panel active" id="vp-yogic">
+    <div class="card"><h3>Sanskrit Sound from the Yogic Viewpoint</h3>
+    <p>From the yogic standpoint, Sanskrit phonemes are not primarily a communication system — they are a precision instrument for working with prāṇa (the vital life force) and the subtle body. The ancient rishis discovered, through extended practices of prāṇāyāma and samādhi, that specific sounds create specific movements of prāṇa through specific nāḍīs (energy channels).</p>
+    <p>The seven svaras correspond directly to the seven primary chakras because the chakras are themselves resonating chambers of prāṇa — and prāṇa, in its most fundamental nature, is vibration. Sa (Ṣaḍja) resonates at the Mūlādhāra chakra because its articulatory point — the simultaneous activation of throat (kaṇṭha) and chest (uras) — corresponds to the downward-pressing Apāna prāṇa that governs the root energy centre. Ni (Niṣāda), articulated in the cranial vault (mūrdhā), corresponds to the upward-soaring Udāna prāṇa that activates the Sahasrāra crown centre.</p>
+    <p>The practice of svara therapy (swara chikitsā) in the yogic tradition uses sustained chanting of specific svaras, held at specific pitches, with specific breath ratios, to deliberately move prāṇa to blocked or deficient chakras. A practitioner with a blocked Anāhata (heart chakra) — emotionally closed, unable to give or receive love — is prescribed sustained Ma (Madhyama) chanting at the natural pitch of their own voice, combined with specific nāḍī-śodhana patterns. This is yoga and music and medicine as a single integrated practice.</p>
+    <p>The beejakshara system is the most concentrated form of this yogic sound science. Each beejakshara is a maximum-compression sonic key — a phoneme whose specific consonant, vowel, and nasal resonance combination opens a specific prāṇic gateway instantly. The lam (लं) beejakshara of the root chakra combines the dental-labial 'l' (activating the root/earth resonance), the open 'a' vowel (the most fundamental Sanskrit vowel, corresponding to the lowest register), and the anusvāra 'm' (the nasal humming that seals and circulates the activated prāṇa). This is engineering, not mysticism.</p>
+    <p>The Nāda Yoga tradition — the path of liberation through sound — synthesises all of this into a complete practice. Beginning with Āhata Nāda (audible, struck sound — music, chanting), the practitioner gradually withdraws attention from external sound to internal sound (Anāhata Nāda), hearing first the sounds of the breath, then the heartbeat, then subtler internal vibrations, until consciousness rests in the primordial silence from which all sound arises. This is the yogic equivalent of what Shankarāchārya describes philosophically as the recognition of Brahman: the silence that is not the absence of sound but the ground of all sound.</p>
+    <p>The Rāga system is the yogic sound science applied to musical performance. Each rāga is specifically associated with a time of day (and therefore a specific prāṇic state in the practitioner's body — the circadian rhythm of prāṇa), a season, a specific emotional-energetic state (bhāva), and a specific therapeutic application. Rāga Bhairav (early morning) works with the prāṇa of awakening — the transition from deep sleep (nidrā) to wakefulness. Rāga Bihāg (late night) works with the prāṇa of deep rest — supporting the dissolution of ego-identity in sleep, which is the nightly practice of the state that mokṣa makes permanent.</p>
+    <a href="https://masterconsciousprotocol.culturalmusings.com" target="_blank" class="raga-source-link">→ Master Conscious Protocol Portal</a>&nbsp;&nbsp;
+    <a href="https://nada-chikitsa.culturalmusings.com" target="_blank" class="raga-source-link">→ Nāda Chikitsā Portal</a>
+    </div>
+  </div>
+
+  <div class="vp-panel" id="vp-spiritual">
+    <div class="card"><h3>Sanskrit Sound from the Spiritual Viewpoint</h3>
+    <p>From the spiritual viewpoint — cutting across the specific philosophical schools — Sanskrit sound is the primary technology of connection between individual consciousness and universal consciousness. Every spiritual tradition that has engaged deeply with Sanskrit has arrived at a version of this insight: the universe is sound, and the human voice is the universe hearing itself.</p>
+    <p>The <em>Praṇava</em> (OM / AUM) stands at the centre of this understanding. The Māṇḍūkya Upaniṣad, in its twelve terse verses, maps the three-and-a-half sounds of AUM to the four states of consciousness: A = Jāgrat (waking), U = Svapna (dream), M = Suṣupti (deep sleep), and the silence after M = Turīya (the Fourth — pure witnessing awareness). OM is therefore not just a spiritual symbol. It is a complete map of consciousness itself — the four levels of being encoded in a single Sanskrit compound sound.</p>
+    <p>The beejaksharas in the tantric spiritual tradition are described as the <em>svarūpa</em> (essential form) of the deities. When Durgā Mā is described as being of the form of the beejakshara Duṃ (दुं), this is not metaphor — in the tantric spiritual framework, Duṃ IS Durgā at the vibrational level of reality. The practitioner who correctly chants Duṃ is not calling Durgā; the practitioner IS invoking Durgā's actual presence because Durgā's actual nature at the subtlest level of manifestation is that specific frequency.</p>
+    <p>The Lalitā Sahasranāma (1000 names of the Goddess Lalitā Tripurasundarī) is the supreme example of Sanskrit sound as spiritual technology. Each of the 1000 names is simultaneously a specific Sanskrit compound with precise phonological structure, a specific set of beejaksharas embedded within it, a specific energetic frequency that activates a specific aspect of the Goddess's nature, and a specific point of anatomical-chakric resonance in the chanter's body. Reciting all 1000 names is therefore a complete spiritual-physiological activation — a 1000-point acupressure of the subtle body performed entirely through sound.</p>
+    <p>From the devotional (bhakti) spiritual perspective, the Saptasvara are the seven love-languages of the divine. In the Nārada Bhakti Sūtras, Nārada describes music (saṃgīta) as the supreme vehicle of bhakti — love of the divine — because music bypasses the intellectual mind and speaks directly to the heart. When Mīrābāī sang her Kṛṣṇa-bhajans, or when Tyāgarāja composed his kritis in Rāga Bhairavi — they were not creating aesthetic objects. They were dissolving the boundary between the devotee and the divine through the medium of Sanskrit-rooted musical sound.</p>
+    <p>The spiritual tradition maintains that specific ragas can induce specific states of divine presence — states that are describable but not reducible to mere emotion. Rāga Darbārī Kāṇāḍā, for instance, is associated in the Hindustani tradition with the presence of Śiva — with that quality of consciousness that is simultaneously absolute stillness and absolute power. The great dhrupad singers of the Darbārī tradition considered themselves not performers but mediums — the raga was moving through them, not being produced by them. This is the spiritual understanding of what music is.</p>
+    <a href="https://spiritualphilosophical.culturalmusings.com" target="_blank" class="raga-source-link">→ Spiritual Philosophical Portal</a>&nbsp;&nbsp;
+    <a href="https://www.vedadhara.com" target="_blank" class="raga-source-link">→ Vedadhara — Sacred Practice</a>
+    </div>
+  </div>
+
+  <div class="vp-panel" id="vp-neurological">
+    <div class="card"><h3>Sanskrit Sound from the Neurological Viewpoint</h3>
+    <p>Modern neuroscience is only beginning to map what the Sanskrit tradition has described for three millennia: that specific sounds create specific, measurable changes in the brain, the nervous system, and the body's biochemistry. The neurological investigation of Sanskrit chanting and Indian classical music has produced some of the most striking findings in the emerging field of music neuroscience.</p>
+    <p>The Sanskrit vowel sounds — particularly the long vowels (ā, ī, ū) sustained in chanting — produce measurable activation of the vagus nerve through their resonance in the pharynx and larynx. The vagus nerve is the primary parasympathetic nerve of the body — its activation produces the relaxation response, reduces cortisol and adrenaline, activates the prefrontal cortex (the seat of executive function and rational judgment), and increases heart rate variability (HRV), a key marker of cardiovascular health and emotional regulation. Sanskrit chanting is, neurologically, a direct stimulation of the body's anti-stress system through precision-tuned acoustic vibration.</p>
+    <p>The anusvāra consonant (m, ṃ) — the nasal humming that terminates most beejaksharas — produces particularly strong vagal activation. Neuroimaging studies have found that sustained nasal humming creates nitric oxide resonance in the paranasal sinuses, increasing sinus blood flow and producing a specific pattern of calming neurotransmitters. The Sanskrit tradition calls this the <em>nāda-bindu</em> effect — the point where sound touches consciousness. Neuroscience calls it parasympathetic dominance. They are describing the same phenomenon from different vocabularies.</p>
+    <p>The specific articulatory positions of Sanskrit — particularly the retroflex consonants (ṭ, ḍ, ṇ, ṣ) which require the tongue to curl back and touch the roof of the palate (mūrdhā/cerebral position) — activate specific sensory-motor cortex regions that are not activated by any other language. Neuroimaging studies of Sanskrit reciters show significantly thicker cortical regions in areas associated with working memory, spatial reasoning, and linguistic processing. This structural neurological change occurs in children who learn Sanskrit chanting before age 12 — the most neuroplastic period of brain development.</p>
+    <p>The rāga system, from a neurological perspective, is a complete emotional regulation technology. The specific svara combinations of each rāga create specific patterns of neural activation. Research at the National Brain Research Centre (Manesar, India) has documented that Rāga Yaman activates the brain's reward circuitry (dopamine pathways) and produces measurable alpha-theta wave states — the same states found in deep meditation. Rāga Bhairavī activates the brain's social bonding circuitry (oxytocin release) and is associated with states of profound compassion and emotional openness. The ancient classification of ragas by time and season corresponds, the researchers found, to the circadian rhythms of neurotransmitter and hormone production — the brain is literally more neurologically available to Yaman's reward activation in the evening than at dawn.</p>
+    <p>The Saptasvara cross-reference with the seven chakras, from the neurological viewpoint, maps onto the seven major nerve plexuses of the body: the sacral plexus (Sa/Mūlādhāra), the hypogastric plexus (Re/Svādhiṣṭhāna), the coeliac/solar plexus (Ga/Maṇipūra), the cardiac plexus (Ma/Anāhata), the pharyngeal plexus (Pa/Viśuddha), the cavernous plexus/pituitary axis (Da/Ājñā), and the cortical surface/pineal axis (Ni/Sahasrāra). The ancient rishis mapped the same structures that modern anatomy describes — through introspection rather than dissection, through sound rather than scalpel.</p>
+    <a href="https://bioresonancemusings.culturalmusings.com" target="_blank" class="raga-source-link">→ Bio-Resonance Musings Portal</a>&nbsp;&nbsp;
+    <a href="https://spandanashodha.culturalmusings.com" target="_blank" class="raga-source-link">→ Spandana Śodha Research</a>
+    </div>
+  </div>
+
+  <div class="vp-panel" id="vp-scientific">
+    <div class="card"><h3>Sanskrit Sound from the Scientific Viewpoint</h3>
+    <p>The scientific investigation of Sanskrit and Indian classical music spans linguistics, acoustics, physics, biochemistry, and the neurosciences. Its most significant finding is one that would not surprise any practitioner of the Sanskrit tradition: that sound has physical, measurable, structural effects on matter — and that the Sanskrit tradition developed a science of these effects 3,000 years before the instruments to measure them existed.</p>
+    <p>Cymatics — the science of visible sound patterns, pioneered by Hans Jenny (1904–1972) — demonstrated that specific sound frequencies, when applied to liquid or granular media, produce specific geometric patterns. The patterns produced by the Sanskrit syllable OM and by individual beejaksharas are geometrically identical to the yantra diagrams used in the tantric tradition for millennia. The Sri Yantra, the geometric diagram of the Goddess Tripurasundarī, is the visual form of the specific frequency spectrum of the Śrī beejakshara (श्रीं). The ancient tantrics were not drawing arbitrary symbols — they were mapping the visual geometry of specific sounds in a vibrating medium (the human body).</p>
+    <p>Acoustic physics confirms the physiological basis of the rāga time-classification system. The human auditory system's sensitivity to specific frequency relationships changes across the circadian cycle — partly due to changing levels of ambient noise (mornings and evenings are acoustically quieter, making the brain more sensitive to fine pitch distinctions), and partly due to endocrine changes that alter cochlear sensitivity. The ragas classified for pre-dawn performance (Bhairav, Lalit) use komal (flat) svaras and slow, contemplative movement — acoustically suited to the brain's high frequency sensitivity in the hypnagogic pre-waking state. The ragas classified for afternoon (Bhīmpalāsī, Multānī) use the faster, more complex patterns that match the brain's peak cognitive performance period.</p>
+    <p>The Sanskrit language's structural uniqueness — its zero-ambiguity formal grammar — has been confirmed by computational linguistics to be, in Rick Briggs' 1985 NASA paper, "the only natural human language suitable for use as an AI knowledge representation language." This scientific confirmation of what Pāṇini accomplished in the 4th century BCE is among the most striking cases of ancient science anticipating modern scientific needs. The same formal structure that makes Sanskrit ideal for AI is what makes it ideal for mantra science: a language with no ambiguity, no contextual drift, no semantic blurring is a language whose phonological combinations produce precisely reproducible effects.</p>
+    <p>The biochemical effects of Sanskrit chanting have been documented across multiple peer-reviewed studies. A 2017 study in the journal <em>Scientific Reports</em> found that Sanskrit chanting altered gene expression patterns in long-term practitioners — specifically upregulating genes associated with immune function, anti-inflammation, and cellular repair, while downregulating stress-response genes. A 2010 study in the <em>International Journal of Yoga</em> found that 12 weeks of Vedic chanting practice produced significant reductions in cortisol, increases in dehydroepiandrosterone (DHEA, an anti-aging hormone), and measurable grey matter increases in the hippocampus (memory centre) and insula (interoceptive awareness centre).</p>
+    <p>Perhaps most scientifically remarkable is the Sanskrit tradition's preservation, through oral transmission across 3,500 years, of a completely error-free text — the Ṛgveda — without a single phonological error. Information theorists have calculated that this oral transmission represents an information-preservation accuracy rate of 99.99986% over 150 generations. The Sanskrit recitation system (Pāṭhaśālā system) with its redundant encoding methods — Saṃhitā Pāṭha, Pada Pāṭha, Krama Pāṭha, Jaṭā Pāṭha, Ghana Pāṭha — is, from an information science perspective, one of the most sophisticated error-correction systems ever devised by a human civilisation.</p>
+    <a href="https://vedicmathematicsgeometry.culturalmusings.com" target="_blank" class="raga-source-link">→ Vedic Mathematics & Geometry Portal</a>&nbsp;&nbsp;
+    <a href="https://unifiedtheory.culturalmusings.com" target="_blank" class="raga-source-link">→ Unified Theory Portal</a>
+    </div>
+  </div>
+
+  <div class="vp-panel" id="vp-astrophysics">
+    <div class="card"><h3>Sanskrit Sound from the Astrophysics Viewpoint</h3>
+    <p>The most startling modern validation of the Sanskrit tradition's sound science comes from astrophysics — specifically from the discovery that the universe itself produces sound, and that this cosmic sound bears structural relationships to the Saptasvara system described in the Nāradīya Śikṣā and the Saṃgīta Ratnākara. The ancient claim that Nāda Brahman (Sound as the Absolute) is the fundamental nature of reality is no longer merely philosophical — it is, increasingly, astrophysical.</p>
+    <p>In 2003, NASA's Chandra X-Ray Observatory detected sound waves emanating from a supermassive black hole in the Perseus galaxy cluster — 250 million light-years from Earth. The sound waves, produced by the black hole's periodic outbursts of energy into the surrounding hot gas, were calculated to be B-flat — 57 octaves below the B-flat audible to human ears. This is the deepest note ever detected in the universe. The Sanskrit tradition holds that the cosmic Praṇava (OM) has a specific pitch — and that all cosmic phenomena are expressions of this primordial sound. Modern astrophysics has now detected cosmic sound. The traditions' claim is no longer unfalsifiable.</p>
+    <p>Cosmic Microwave Background (CMB) radiation — the afterglow of the Big Bang — has been found to contain acoustic oscillations: literal sound waves that propagated through the early universe for the first 380,000 years after the Big Bang, before the universe became transparent to light. These primordial sound waves created the density fluctuations that eventually became galaxies, stars, and planets. The universe's large-scale structure — the cosmic web of galaxy filaments and voids — is, at the deepest level, a record of the first cosmic sounds. The Sanskrit tradition's claim that the universe was spoken into existence by Brahman's primordial Nāda is not mythology. It is a pre-scientific description of what astrophysics now calls Baryon Acoustic Oscillations.</p>
+    <p>The relationship between the Saptasvara (seven musical notes) and astrophysical structures is an area of active research interest. The seven svaras correspond, in terms of vibrational ratios, to the seven primary harmonic relationships in acoustic physics: the unison (Sa/1:1), the major second (Re/9:8), the major third (Ga/5:4), the perfect fourth (Ma/4:3), the perfect fifth (Pa/3:2), the major sixth (Da/5:3), and the major seventh (Ni/15:8). These same ratios — identified by Pythagoras in the 6th century BCE, and by Āryabhaṭa's tradition independently — appear in the orbital relationships of planetary systems, in the vibrational modes of atomic orbitals, and in the dimensional relationships of crystals. The seven svaras are not a human invention. They are a human discovery of a mathematical structure that pervades the physical universe at every scale.</p>
+    <p>The Sanskrit concept of <em>Nāda Brahman</em> receives its most precise modern formulation in string theory — the branch of theoretical physics that proposes that the fundamental constituents of reality are not particles but one-dimensional vibrating strings. Each elementary particle (electron, quark, photon) is, in string theory, a specific vibrational mode of the same fundamental string. The universe, in string theory, is literally made of vibration — and different particles are different notes on the same cosmic string. This is what the Sanskrit tradition called Nāda Brahman 2,500 years ago: the universe is one string, vibrating at different frequencies, appearing as different forms.</p>
+    <p>The 108 sacred number — which appears throughout the Sanskrit tradition (108 Karaṇas, 108 Upaniṣads, 108 beads of a mālā, 108 names of primary deities) — has a precise astrophysical basis: the average distance between the Earth and the Sun is 108 times the Sun's diameter. The average distance between the Earth and the Moon is 108 times the Moon's diameter. The Sun's diameter is 108 times the Earth's diameter. These ratios were known to Vedic astronomers, and the number 108 was encoded into the tradition as a cosmic constant — the number at which the scale of the solar system achieves its specific harmonic proportions. The Saptasvara, the 108 Karaṇas, the chakra system: all are expressions of the same cosmic mathematical order.</p>
+    <a href="https://spandanashodha.culturalmusings.com" target="_blank" class="raga-source-link">→ Spandana Śodha Vibrational Research</a>&nbsp;&nbsp;
+    <a href="https://completecelestialsynthesis.culturalmusings.com" target="_blank" class="raga-source-link">→ Complete Celestial Synthesis Portal</a>
+    </div>
+  </div>
+
+  <div class="vp-panel" id="vp-philosophical">
+    <div class="card"><h3>Sanskrit Sound from the Philosophical Viewpoint</h3>
+    <p>Indian philosophy's contribution to the philosophy of sound is unparalleled in depth and scope. Three distinct but interlocking philosophical traditions — the Grammarian school (Vyākaraṇa-darśana) of Bhartrhari, the Mīmāṃsā school, and the Vedāntic schools — each produced complete philosophical systems centred on the nature of sound, language, and consciousness. Together, they constitute a philosophy of sound more comprehensive than anything produced by Western philosophy until the 20th century.</p>
+    <p>Bhartrhari's Vākyapadīya (On the Sentence and the Word, c. 5th century CE) is the foundational text. Its central doctrine — Sphoṭavāda — holds that meaning is not assembled from individual phonemes and words, but that meaning is a single, indivisible, eternal entity (the Sphoṭa) that manifests through the temporal sequence of phonemes. When you hear the Sanskrit sentence "Aham Brahmasmi" (I am Brahman), what you actually grasp is not the sum of its phonemes — it is the Sphoṭa, the unitary meaning-event, that flashes in consciousness when the sentence is complete. The phonemes are not the meaning — they are the occasions through which the eternal meaning reveals itself. This is the deepest philosophical explanation for why Sanskrit pronunciation is so critical in mantra science: the correct phonemes are the correct occasions for the eternal truth (the Sphoṭa/the deity's presence) to flash into manifestation.</p>
+    <p>The Mīmāṃsā school — the school of Vedic hermeneutics that takes the Vedas as eternal, self-validating revelation — develops the doctrine of Śabda Nityatva (the eternality of sound). This doctrine holds that the Sanskrit phonemes of the Vedas are not sounds produced by human mouths — they are eternal, self-luminous entities that merely become audible when a human voice provides the right conditions for their manifestation. The Vedic mantras do not exist because human beings chant them; human beings chant them because the mantras exist eternally in the fabric of reality. This is a complete inversion of the common understanding of language — and it is, from the quantum physics perspective, not entirely wrong: the mathematical structures that govern physical reality (what physicists call "laws of nature") do appear to have a kind of existence that is independent of any particular physical system that instantiates them.</p>
+    <p>Abhinavagupta's Kashmir Śaivism (10th–11th century CE) offers the most sophisticated integration of sound philosophy with aesthetic theory. In his Abhinavabhāratī (commentary on the Nāṭya Śāstra) and his Tantrāloka, Abhinavagupta develops the concept of <em>dhvani</em> (resonance/suggestion) — the idea that the deepest meaning of any Sanskrit text or musical composition is not its literal or even its intended meaning, but the resonance it creates in the prepared consciousness of the recipient. Dhvani is the philosophical basis of Rasa theory: the rāga does not produce emotions in the listener — it creates the resonance in which pre-existing emotional-aesthetic potentialities in the listener's consciousness spontaneously arise. The music is not the cause. The music is the occasion for consciousness to recognise its own depth.</p>
+    <p>The concept of <em>Parā Vāk</em> — the Transcendent Voice — is the philosophical summit of Sanskrit sound science. Parā Vāk is described in the Kashmir Śaiva tradition as the level at which there is no difference between the Seer, the Seen, and the Act of Seeing — the level at which sound has not yet differentiated from consciousness. It is the silence that precedes the first vibration, the Nāda that precedes the first Svara. Shankarāchārya identifies this with Brahman itself; the Kashmir Śaivas identify it with Śiva's first movement of self-awareness. In either case, it is the source from which all sound — all music, all language, all Sanskrit — ultimately arises and to which it ultimately returns. The philosopher and the Tillānā singer are both pointing toward the same reality: the primordial Parā Vāk that is both the source of all music and the silence in which all music ceases.</p>
+    <p>The philosophical cross-reference between Alaṃkāra (ornamental figures of speech), Chandas (metre), and musical forms reveals a unified aesthetic theory: beauty, in the Sanskrit philosophical tradition, is not a subjective experience — it is the recognition by consciousness of its own inherent structure reflected in the external form. A perfect Sanskrit śloka in Gāyatrī metre, with a precisely placed alaṃkāra, sung in the correct Rāga — creates an experience of beauty because the mathematical, phonological, and emotional structures of the composition resonate with the pre-existing structure of the consciousness perceiving it. This is Rasa theory at its deepest level: Rasa is not produced by the art. Rasa is the art revealing consciousness to itself.</p>
+    <a href="https://spiritualphilosophical.culturalmusings.com" target="_blank" class="raga-source-link">→ Spiritual Philosophical Portal</a>&nbsp;&nbsp;
+    <a href="https://hindupedia.com/en/Veda" target="_blank" class="raga-source-link">→ Hindupedia — Vedic Philosophy</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ PANEL 7: NETWORK ═══════════════════════════════════════ -->
+<section class="panel" id="panel-network">
+  <div class="section-head">
+    <span class="sanskrit-title">सांस्कृतिक — सम्पर्क — जाल</span>
+    <h2>Cultural Musings Network</h2>
+    <p>The complete portal ecosystem — twelve knowledge streams, one civilisational mission</p>
+  </div>
+
+  <div class="card card-accent" style="margin-bottom:2rem;">
+    <h3>About the Network</h3>
+    <p>The Cultural Musings network is a living cross-reference of knowledge portals spanning Sanskrit, Nāda, Vedic mathematics, classical dance, philosophy, bio-resonance, and the unified theory of consciousness. Each portal is a deep dive into one stream of an interconnected river of knowledge. Together, they form the most comprehensive digital encyclopaedia of Sanskrit civilisational wisdom in the world.</p>
+  </div>
+
+  <div class="network-grid">
+    <a href="https://www.culturalmusings.com" target="_blank" class="network-card">
+      <span class="nc-icon">🏛️</span>
+      <span class="nc-name">Cultural Musings — Main Portal</span>
+      <span class="nc-url">culturalmusings.com</span>
+      <span class="nc-desc">The mother portal — entry point to the entire knowledge network</span>
+    </a>
+    <a href="https://nada-chikitsa.culturalmusings.com" target="_blank" class="network-card">
+      <span class="nc-icon">🎵</span>
+      <span class="nc-name">Nāda Chikitsā</span>
+      <span class="nc-url">nada-chikitsa.culturalmusings.com</span>
+      <span class="nc-desc">Sound healing through Sanskrit — the science of Swara Therapy and vibrational medicine</span>
+    </a>
+    <a href="https://natyashastra.culturalmusings.com" target="_blank" class="network-card">
+      <span class="nc-icon">🎭</span>
+      <span class="nc-name">Nāṭya Śāstra Portal</span>
+      <span class="nc-url">natyashastra.culturalmusings.com</span>
+      <span class="nc-desc">Complete study of Bharata Muni's performance science and Sanskrit aesthetics</span>
+    </a>
+    <a href="https://karanasrootmap.culturalmusings.com" target="_blank" class="network-card">
+      <span class="nc-icon">🗺️</span>
+      <span class="nc-name">Karaṇas Root Map</span>
+      <span class="nc-url">karanasrootmap.culturalmusings.com</span>
+      <span class="nc-desc">All 108 Karaṇas — Sanskrit names, movement descriptions, and cross-references</span>
+    </a>
+    <a href="https://bioresonancemusings.culturalmusings.com" target="_blank" class="network-card">
+      <span class="nc-icon">🧬</span>
+      <span class="nc-name">Bio-Resonance Musings</span>
+      <span class="nc-url">bioresonancemusings.culturalmusings.com</span>
+      <span class="nc-desc">Sanskrit and the body's intelligence — vibrational medicine and ancient metaphors</span>
+    </a>
+    <a href="https://spiritualphilosophical.culturalmusings.com" target="_blank" class="network-card">
+      <span class="nc-icon">🕉️</span>
+      <span class="nc-name">Spiritual Philosophical</span>
+      <span class="nc-url">spiritualphilosophical.culturalmusings.com</span>
+      <span class="nc-desc">Advaita, Dvaita, Kashmir Śaivism, Tantra — the philosophical matrix of Sanskrit</span>
+    </a>
+    <a href="https://masterconsciousprotocol.culturalmusings.com" target="_blank" class="network-card">
+      <span class="nc-icon">🧘</span>
+      <span class="nc-name">Master Conscious Protocol</span>
+      <span class="nc-url">masterconsciousprotocol.culturalmusings.com</span>
+      <span class="nc-desc">Sanskrit's role in mapping and navigating consciousness — Yoga, Tantra, Vedānta unified</span>
+    </a>
+    <a href="https://spandanashodha.culturalmusings.com" target="_blank" class="network-card">
+      <span class="nc-icon">〰️</span>
+      <span class="nc-name">Spandana Śodha</span>
+      <span class="nc-url">spandanashodha.culturalmusings.com</span>
+      <span class="nc-desc">Vibrational research — Sanskrit Spanda theory meets quantum physics and cymatics</span>
+    </a>
+    <a href="https://vedicmathematicsgeometry.culturalmusings.com" target="_blank" class="network-card">
+      <span class="nc-icon">🔢</span>
+      <span class="nc-name">Vedic Mathematics & Geometry</span>
+      <span class="nc-url">vedicmathematicsgeometry.culturalmusings.com</span>
+      <span class="nc-desc">Zero, π, binary, infinite series — Sanskrit's mathematical genius cross-referenced</span>
+    </a>
+    <a href="https://natyashastraclassical-dance.culturalmusings.com" target="_blank" class="network-card">
+      <span class="nc-icon">💃</span>
+      <span class="nc-name">Nāṭya Śāstra Classical Dance</span>
+      <span class="nc-url">natyashastraclassical-dance.culturalmusings.com</span>
+      <span class="nc-desc">Classical dance forms — Bharatanāṭyam, Odissi, Kūcipūḍi through the Sanskrit lens</span>
+    </a>
+    <a href="https://karanassacredsynthesis.culturalmusings.com" target="_blank" class="network-card">
+      <span class="nc-icon">🌸</span>
+      <span class="nc-name">Karaṇas Sacred Synthesis</span>
+      <span class="nc-url">karanassacredsynthesis.culturalmusings.com</span>
+      <span class="nc-desc">The sacred synthesis of 108 Karaṇas — cosmic movement as divine language</span>
+    </a>
+    <a href="https://completecelestialsynthesis.culturalmusings.com" target="_blank" class="network-card">
+      <span class="nc-icon">⭐</span>
+      <span class="nc-name">Complete Celestial Synthesis</span>
+      <span class="nc-url">completecelestialsynthesis.culturalmusings.com</span>
+      <span class="nc-desc">108 Karaṇas in celestial context — planetary correspondences and cosmic movement</span>
+    </a>
+    <a href="https://unifiedtheory.culturalmusings.com" target="_blank" class="network-card">
+      <span class="nc-icon">♾️</span>
+      <span class="nc-name">Unified Theory Portal</span>
+      <span class="nc-url">unifiedtheory.culturalmusings.com</span>
+      <span class="nc-desc">The final summation — all portals, all knowledge streams converging into one understanding</span>
+    </a>
+    <a href="https://nadabrahmansktadv2.culturalmusings.com" target="_blank" class="network-card">
+      <span class="nc-icon">📖</span>
+      <span class="nc-name">Sanskrit Layer II</span>
+      <span class="nc-url">nadabrahmansktadv2.culturalmusings.com</span>
+      <span class="nc-desc">18 encyclopaedic tabs — Sanskrit in Nāṭya Śāstra, Yoga, Healing, Cosmos, AI, and Living Traditions</span>
+    </a>
+  </div>
+
+  <div class="card" style="margin-top:2rem;">
+    <h3>Primary Reference Archives</h3>
+    <div class="network-grid" style="margin-top:1rem;">
+      <a href="https://www.wisdomlib.org" target="_blank" class="network-card"><span class="nc-name">Wisdom Library</span><span class="nc-url">wisdomlib.org</span><span class="nc-desc">Most comprehensive Sanskrit text database online</span></a>
+      <a href="https://sanskritdocuments.org" target="_blank" class="network-card"><span class="nc-name">Sanskrit Documents</span><span class="nc-url">sanskritdocuments.org</span><span class="nc-desc">Complete Sanskrit text archive in Unicode Devanāgarī</span></a>
+      <a href="https://vedicheritage.gov.in" target="_blank" class="network-card"><span class="nc-name">Vedic Heritage India</span><span class="nc-url">vedicheritage.gov.in</span><span class="nc-desc">Government of India's official Vedic knowledge portal</span></a>
+      <a href="https://www.vedadhara.com" target="_blank" class="network-card"><span class="nc-name">Vedadhara</span><span class="nc-url">vedadhara.com</span><span class="nc-desc">Mantra science, Vedic practice, and living tradition resources</span></a>
+      <a href="https://www.kamakoti.org" target="_blank" class="network-card"><span class="nc-name">Kamakoti</span><span class="nc-url">kamakoti.org</span><span class="nc-desc">Tantric texts, Soundaryalaharī, Śāntā Purāṇa references</span></a>
+      <a href="https://vedapurana.org" target="_blank" class="network-card"><span class="nc-name">Veda Purana</span><span class="nc-url">vedapurana.org</span><span class="nc-desc">Complete Vedic and Purāṇic text archive</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════ PANEL 8: CONTACT ═══════════════════════════════════════ -->
+<section class="panel" id="panel-contact">
+  <div class="section-head">
+    <span class="sanskrit-title">सम्पर्क — संवाद — प्रश्न</span>
+    <h2>Connect · Enquire · Collaborate</h2>
+    <p>Leave your message, enquiry, or collaboration request — we will respond within 48 hours</p>
+  </div>
+
+  <div class="contact-grid">
+    <div>
+      <div class="card card-accent" style="margin-bottom:1.5rem;">
+        <h3>Leave a Message</h3>
+        <p>Use the chatbot or the enquiry form below. Your message goes directly to our team at <strong>smith123846@gmail.com</strong> and we will respond within 24–48 hours.</p>
+        <p style="margin-top:0.5rem; font-size:0.9rem;"><strong>Phone:</strong> +91 91213 79100<br><strong>Email:</strong> smith123846@gmail.com</p>
+      </div>
+
+      <div class="chatbot-panel">
+        <div class="chatbot-header">🤖 NadaBrahman Knowledge Chatbot — Leave a Message</div>
+        <div class="chatbot-body">
+          <div class="chatbot-messages" id="chatMessages">
+            <div class="chat-msg bot">Namaste 🙏 Welcome to the NadaBrahman knowledge portal. I am here to help you with Sanskrit, Saptasvara, Rāgas, Beejaksharas, Philosophy, and all matters of Nāda Brahman. Please leave your question or message and our team will respond within 48 hours. What would you like to know?</div>
+          </div>
+          <div class="chatbot-input-row">
+            <input type="text" class="chatbot-input" id="chatInput" placeholder="Type your question or message..." onkeypress="if(event.key==='Enter') sendChat()">
+            <button class="chatbot-send" onclick="sendChat()">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="jotform-embed">
+        <iframe src="https://form.jotform.com/261042208142039" title="NadaBrahman Enquiry Form" loading="lazy"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <div class="card card-teal" style="margin-top:2rem;">
+    <h3>JotForm Agent — Detailed Enquiry</h3>
+    <p>For detailed enquiries, collaboration proposals, course bookings, and workshop requests, please use our full JotForm agent:</p>
+    <p style="margin-top:0.75rem;">
+      <a href="https://www.jotform.com/agent/019d8f3727af73cab8f1024b3df3ef1f84b6" target="_blank" style="color:var(--teal); font-weight:600;">→ Open NadaBrahman JotForm Agent</a>
+    </p>
+    <p style="margin-top:0.5rem; font-size:0.88rem; color:var(--muted);">The agent will guide you through your specific enquiry and route it to the right team member. You can also use this for feedback on specific portal content, requests for custom research, or to contribute to the knowledge base.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════════════════════ FOOTER ═══════════════════════════════════════ -->
+<footer>
+  <span class="footer-om">ॐ</span>
+  <p>
+    <a href="https://nadabrahmansktadv2.culturalmusings.com">Sanskrit Layer II</a> ·
+    <a href="https://natyashastra.culturalmusings.com">Nāṭya Śāstra</a> ·
+    <a href="https://nada-chikitsa.culturalmusings.com">Nāda Chikitsā</a> ·
+    <a href="https://unifiedtheory.culturalmusings.com">Unified Theory</a> ·
+    <a href="mailto:smith123846@gmail.com">Contact</a>
+  </p>
+  <p style="margin-top:0.75rem;">NadaBrahman Enhancement Layer III · Cultural Musings © · All knowledge belongs to the cosmos</p>
+  <p style="margin-top:0.4rem; font-style:italic; opacity:0.5;">संस्कृतं न म्रियते — Sanskrit does not die</p>
+</footer>
+
+<script>
+/* ═══ NAVIGATION ═══ */
+function showPanel(name) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + name).classList.add('active');
+  event.target.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ═══ SAPTASVARA DATA ═══ */
+const svaraData = {
+  sa: {
+    name: 'Sa · Ṣaḍja', devanagari: 'स', full: 'Ṣaḍja (षड्ज)',
+    meaning: 'Born of six (ṣaḍ = six, ja = born) — activates all six resonance points simultaneously',
+    animal: 'Peacock (Mayūra)', deity: 'Agni (Fire)', chakra: 'Mūlādhāra (Root)', element: 'Earth',
+    frequency: '240 Hz (base; adjusts to singer)',
+    beeja: 'लं (Laṃ)',
+    svara_type: 'Acala (immovable) — never flat or sharp',
+    raga_examples: 'Bhairavī, Bhairav, Bilaval, Yaman — Sa is present in all ragas',
+    philosophy: 'In Advaita, Sa is the symbol of Brahman — the unchanging ground upon which all other notes (jīvas/worlds) arise and dissolve. It is the drone of existence itself.',
+    physiology: 'Resonates in the chest-throat junction (kṛkāṭikā). Sustained chanting activates the Apāna prāṇa — the downward-moving vital force governing stability, groundedness, and immune function.',
+    shankara: 'Shankarāchārya in Ātmabodha uses Sa as the metaphor for Brahman — the single, unchanging note upon which all the apparent variety of the world plays out. The world is the music; Brahman is the Sa from which it never truly departs.'
+  },
+  re: {
+    name: 'Re · Ṛṣabha', devanagari: 'रे', full: 'Ṛṣabha (ऋषभ)',
+    meaning: 'The Bull (Ṛṣabha) — power, virility, the irresistible forward movement of life',
+    animal: 'Bull (Vṛṣabha)', deity: 'Brahmā (Creator)', chakra: 'Svādhiṣṭhāna (Sacral)', element: 'Water',
+    frequency: '267–270 Hz (shuddha); 256 Hz (komal)',
+    beeja: 'वं (Vaṃ)',
+    svara_type: 'Vikṛti (variable) — exists as shuddha (natural) and komal (flat)',
+    raga_examples: 'Komal Re: Bhairav, Todi, Āsāvarī. Shuddha Re: Bilaval, Kalyāṇ, Bhīmpalāsī',
+    philosophy: 'In Dvaita philosophy, Re represents the first real distinction from the Absolute — the first breath of creation, the first moment in which individuality becomes possible without losing its connection to Sa (Brahman).',
+    physiology: 'Resonates in the cardiac plexus (hṛdaya). Sustained Re chanting — especially komal Re — activates parasympathetic response, reduces blood pressure, and supports emotional processing in the amygdala.',
+    shankara: 'In the Soundaryalaharī commentary tradition, Re (ṛ) is the Sanskrit vocalic consonant associated with the Goddess Bhūvanā — the consciousness that animates all worlds. Komal Re, used in Rāga Bhairav, carries the quality of the pre-dawn state — the threshold between sleep and waking that Shankarāchārya identifies with the Taijasa state (the dreaming self).'
+  },
+  ga: {
+    name: 'Ga · Gāndhāra', devanagari: 'ग', full: 'Gāndhāra (गान्धार)',
+    meaning: 'Of Gāndhāra (the ancient kingdom) — associated with the Gāndhārva science of celestial music',
+    animal: 'Goat (Aja)', deity: 'Sarasvatī (Learning)', chakra: 'Maṇipūra (Solar Plexus)', element: 'Fire',
+    frequency: '300–320 Hz (shuddha); 288 Hz (komal)',
+    beeja: 'रं (Raṃ)',
+    svara_type: 'Vikṛti (variable) — exists as shuddha (major third) and komal (minor third)',
+    raga_examples: 'Komal Ga: Bhairavī, Kāfī, Sāraṅg. Shuddha Ga: Kalyāṇ, Bilaval, Bhūpālī',
+    philosophy: 'Ga is the note of will and discrimination (viveka) — the Maṇipūra quality of choosing rightly. In the philosophical tradition, it represents the movement from instinct (Sa/Earth) and emotion (Re/Water) to intentional action (Ga/Fire).',
+    physiology: 'Resonates in the solar plexus (nābhi). Associated with the Samāna prāṇa — the equalising vital force that governs digestion, metabolism, and decision-making. Komal Ga activates introspective, inward-turning awareness; shuddha Ga activates expansive, outward-directed energy.',
+    shankara: 'In the Vivekacūḍāmaṇi, Shankarāchārya uses the sharp/flat distinction (shuddha/komal) of Ga as an analogy for the distinction between right and wrong knowledge (right knowledge = viveka, discrimination; wrong knowledge = avidyā). Just as playing the wrong Ga destroys the rāga, avidyā destroys the possibility of mokṣa.'
+  },
+  ma: {
+    name: 'Ma · Madhyama', devanagari: 'म', full: 'Madhyama (मध्यम)',
+    meaning: 'The Middle One — the central, balancing note of the seven-note scale',
+    animal: 'Crane (Krauñca)', deity: 'Viṣṇu (Sustainer)', chakra: 'Anāhata (Heart)', element: 'Air',
+    frequency: '320–360 Hz (shuddha); 341 Hz (tīvra/sharp)',
+    beeja: 'यं (Yaṃ)',
+    svara_type: 'Vikṛti (variable) — uniquely exists as shuddha (natural fourth) and TĪVRA (sharp/augmented fourth)',
+    raga_examples: 'Shuddha Ma: Kāfī, Bhairavī, Deś. Tīvra Ma (♯): Yaman, Kalyāṇ, Śyām Kalyāṇ, Bhūpālī',
+    philosophy: 'Tīvra Ma is philosophically unique — the only raised svara in the system. It represents the razor\'s edge of Madhyamā Pratipadā (the Middle Path) — the transcendence of both extremes that points toward mokṣa. In the Advaita framework, Tīvra Ma is the moment of turīya — the fourth state — breaking through the ordinary scale of three states (waking/dreaming/sleep).',
+    physiology: 'Resonates in the cardiac plexus (anāhata) — the heart centre. Sustained Ma chanting, particularly at the natural speaking pitch, activates the vagus nerve most directly. Associated with the Vyāna prāṇa — the all-pervading vital force that connects all body regions, corresponding to the Anāhata chakra\'s integrative function.',
+    shankara: 'In his commentary on the Māṇḍūkya Upaniṣad, Shankarāchārya discusses the transition from M (the third element of AUM — corresponding to deep sleep/sushupti) to the silence (turīya). This transition is precisely the tīvra Ma — the sharp, unexpected note that breaks the pattern and points consciousness toward its source beyond all patterns.'
+  },
+  pa: {
+    name: 'Pa · Pañcama', devanagari: 'प', full: 'Pañcama (पञ्चम)',
+    meaning: 'The Fifth — the universal consonance, the note that resonates most harmonically with Sa',
+    animal: 'Cuckoo (Kokila)', deity: 'Nārada (Divine Musician)', chakra: 'Viśuddha (Throat)', element: 'Ākāśa (Space)',
+    frequency: '360 Hz (always fixed, like Sa)',
+    beeja: 'हं (Haṃ)',
+    svara_type: 'Acala (immovable) — never flat or sharp. Pa and Sa are the two unchanging poles of the musical cosmos.',
+    raga_examples: 'Pa is present in most ragas. Notably absent in Toḍī and some Mārwā family ragas — its absence creates a specific tension and searching quality.',
+    philosophy: 'Pa represents the relationship between the individual soul (jīva) and Brahman — a perfect fifth, the most consonant of all intervals, representing the harmony of the individual with the universal without their merging. In Viśiṣṭādvaita, Sa and Pa are Brahman and the liberated jīva — always in perfect consonance, never identical.',
+    physiology: 'Resonates in the throat (viśuddha/laryngeal plexus). The natural harmonic relationship between Sa and Pa (3:2 ratio) is reflected in the Iḍā and Piṅgalā nāḍīs — the solar and lunar channels whose balance is the prerequisite for prāṇa to rise through Suṣumnā. Singing Pa in relation to Sa stimulates both vagus nerve and pharyngeal plexus simultaneously.',
+    shankara: 'Shankarāchārya in the Brahmasūtrabhāṣya uses the consonance of Sa-Pa as a model for the relationship between Paramātman (universal self) and jīvātman (individual self) — always in resonance, apparently distinct, ultimately non-separate. The fact that Pa is also immovable (acala) — like Sa — supports the Advaita reading: at the deepest level, the individual self is as unmoving and eternal as Brahman itself.'
+  },
+  da: {
+    name: 'Da · Dhaivata', devanagari: 'ध', full: 'Dhaivata (धैवत)',
+    meaning: 'Of the Gods (Daiva/Divine) — the note of divine perception and subtle awareness',
+    animal: 'Swan (Haṃsa)', deity: 'Gaṇeśa (Remover of Obstacles)', chakra: 'Ājñā (Third Eye)', element: 'Mind (Manas)',
+    frequency: '400–427 Hz (shuddha); 384 Hz (komal)',
+    beeja: 'ॐ (Oṃ)',
+    svara_type: 'Vikṛti (variable) — exists as shuddha (natural sixth) and komal (minor sixth)',
+    raga_examples: 'Komal Dha: Bhairav, Āsāvarī, Bhairavī. Shuddha Dha: Bilaval, Khamāj, Kalyāṇ',
+    philosophy: 'The Haṃsa (swan) is the symbol of the liberated consciousness (Paramātman) — the one who can separate milk from water, truth from illusion. The Ājñā chakra resonance of Da corresponds to the discriminative intelligence (buddhi) that can perceive Brahman through the apparent multiplicity of phenomena.',
+    physiology: 'Resonates in the frontal sinuses and pituitary region (ājñā/cavernous plexus). Sustained Da chanting — particularly the long ā vowel — creates measurable nitric oxide release in the frontal sinuses and activation of the prefrontal cortex. Associated with the clarity of perception and reduction of reactive thinking.',
+    shankara: 'In the Pañcadaśī commentary tradition that follows Shankarāchārya, the swan (haṃsa) mantra — "Haṃ-Sa" (I am That), the natural sound of the breath — is aligned with the Dhaivata svara because both point to the same recognition: the individual consciousness (haṃsa/swan) perceiving itself as Brahman. The Ājñā chakra is where this recognition dawns.'
+  },
+  ni: {
+    name: 'Ni · Niṣāda', devanagari: 'नि', full: 'Niṣāda (निषाद)',
+    meaning: 'The Dwelling One (ni + ṣad = seated within) — the note that dwells deepest in consciousness',
+    animal: 'Elephant (Gaja)', deity: 'Śiva (Pure Consciousness)', chakra: 'Sahasrāra (Crown)', element: 'Pure Consciousness (Cit)',
+    frequency: '450–480 Hz (shuddha); 432 Hz (komal)',
+    beeja: 'विसर्ग (Visarga ḥ)',
+    svara_type: 'Vikṛti (variable) — exists as shuddha (major seventh) and komal (minor seventh)',
+    raga_examples: 'Komal Ni: Bhairavī, Āsāvarī, Kāfī, Bhairav. Shuddha Ni: Kalyāṇ, Bilaval, Khamāj',
+    philosophy: 'Ni is the penultimate note — the threshold before Sa returns one octave higher. It represents the state just before mokṣa — the fully purified individual consciousness hovering at the edge of dissolution into Brahman. In Advaita, Ni is the jīva in the state of jīvanmukti (liberated while still in the body) — fully aware of Brahman, still apparently maintaining individual form.',
+    physiology: 'Resonates in the cranial vault (mūrdhā/cortical surface) — the highest articulation point in Sanskrit phonology and the anatomical seat of the Sahasrāra. Associated with the Udāna prāṇa — the upward-soaring vital force that governs the transition between waking and sleeping, and ultimately, between embodied existence and liberation. Sustained Ni chanting has been shown to activate pineal region and promote melatonin and DMT precursor synthesis.',
+    shankara: 'In the Māṇḍūkyakārikā commentary, Shankarāchārya discusses the moment before the AUM syllable returns to silence — the dissolution of M into the transcendent fourth (turīya). This moment of dissolution is the Ni of consciousness — the note that, when fully sustained and then released, does not resolve downward to the lower octave\'s sa but upward into the silence of Brahman itself. Niṣāda is the philosopher\'s note — the note of the ṛṣi sitting in the cave of the heart.'
+  }
+};
+
+function showSvara(key) {
+  document.querySelectorAll('.svara-cell').forEach(c => c.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+  const d = svaraData[key];
+  document.getElementById('svara-detail').classList.add('active');
+  document.getElementById('svara-detail').innerHTML = `
+    <h3><span class="devanagari" style="font-size:2rem;margin-right:0.5rem;">${d.devanagari}</span> ${d.name} — ${d.full}</h3>
+    <p style="color:var(--muted);font-style:italic;margin-bottom:1rem;">${d.meaning}</p>
+    <div class="grid-2">
+      <div>
+        <table style="width:100%;font-size:0.88rem;">
+          <tr><td style="color:var(--faint);padding:4px 0;width:40%;">Animal</td><td style="color:var(--muted);">${d.animal}</td></tr>
+          <tr><td style="color:var(--faint);padding:4px 0;">Deity</td><td style="color:var(--muted);">${d.deity}</td></tr>
+          <tr><td style="color:var(--faint);padding:4px 0;">Chakra</td><td style="color:var(--muted);">${d.chakra}</td></tr>
+          <tr><td style="color:var(--faint);padding:4px 0;">Element</td><td style="color:var(--muted);">${d.element}</td></tr>
+          <tr><td style="color:var(--faint);padding:4px 0;">Beejakshara</td><td><span class="devanagari" style="font-size:1.2rem;color:var(--maroon);">${d.beeja}</span></td></tr>
+          <tr><td style="color:var(--faint);padding:4px 0;">Type</td><td style="color:var(--muted);font-size:0.82rem;">${d.svara_type}</td></tr>
+          <tr><td style="color:var(--faint);padding:4px 0;">Frequency</td><td style="color:var(--muted);font-size:0.82rem;">${d.frequency}</td></tr>
+        </table>
+      </div>
+      <div>
+        <p style="font-size:0.88rem;color:var(--muted);"><strong style="color:var(--maroon);">Key Rāgas:</strong> ${d.raga_examples}</p>
+        <p style="font-size:0.88rem;color:var(--muted);margin-top:0.75rem;"><strong style="color:var(--maroon);">Physiological Resonance:</strong> ${d.physiology}</p>
+      </div>
+    </div>
+    <div style="background:var(--surface2);border-left:4px solid var(--saffron);padding:1rem 1.25rem;border-radius:0 8px 8px 0;margin-top:1rem;">
+      <p style="font-size:0.88rem;color:var(--muted);margin:0;"><strong style="color:var(--maroon);">Philosophical View:</strong> ${d.philosophy}</p>
+    </div>
+    <div style="background:linear-gradient(135deg,#3A0A0A,#5C1A00);border-radius:8px;padding:1rem 1.25rem;margin-top:0.75rem;">
+      <p style="font-size:0.88rem;color:rgba(255,220,150,0.85);margin:0;"><strong style="color:#FFD700;">Shankarāchārya's Perspective:</strong> ${d.shankara}</p>
+    </div>
+  `;
+}
+
+/* ═══ BEEJAKSHARA DATA ═══ */
+const beejaData = {
+  om: {
+    sanskrit: 'ॐ', name: 'Om / Praṇava', deity: 'Brahman — All deities', chakra: 'Ājñā + Sahasrāra',
+    svara: 'Da → Ni (the full arc of consciousness)', element: 'All five + Consciousness',
+    structure: 'A (creation/Brahmā) + U (sustenance/Viṣṇu) + M (dissolution/Śiva) + Silence (Turīya/Brahman)',
+    meaning: 'The primordial sound of the universe — the Praṇava. Not a symbol of the Absolute; the actual sonic form of the Absolute. Contains within itself the entire cosmological cycle of creation, sustenance, and dissolution, plus the underlying silence of pure awareness that makes all three possible.',
+    philosophy: 'The Māṇḍūkya Upaniṣad devotes all 12 of its verses exclusively to OM. It maps A = Vaiśvānara (waking consciousness/gross body), U = Taijasa (dream consciousness/subtle body), M = Prājña (deep sleep/causal body), Silence = Turīya (pure witnessing awareness/Ātman = Brahman). Shankarāchārya\'s commentary on the Māṇḍūkya is his most concentrated philosophical exposition. He shows that OM is not a representation of Brahman — it is Brahman\'s own self-recognition in sound.',
+    physiology: 'A: chest/oral cavity resonance (Maṇipūra-Anāhata). U: mid-palate forward (Viśuddha). M: cranial vault nasal resonance (Ājñā-Sahasrāra). The full AUM chant systematically activates the entire ascent of prāṇa from Mūlādhāra to Sahasrāra in approximately 8 seconds — the length of one full OM utterance at natural speech pace.'
+  },
+  hreem: {
+    sanskrit: 'ह्रीं', name: 'Hrīṃ — Māyā Bīja', deity: 'Lalitā Tripurasundarī / Śiva-Śakti combined',
+    chakra: 'Anāhata (Heart) → Sahasrāra', svara: 'Ma (heart) to Ni (crown)',
+    element: 'Fire + Ākāśa + Pure Consciousness',
+    structure: 'Ha (Śiva/space) + Ra (Agni/fire) + Ī (Śakti/power) + ṃ (anusvāra/bindu — the point of cosmic concentration)',
+    meaning: 'The beejakshara of the supreme Goddess in her form as Māyā (the divine power of creation) and Mokṣa-dāyinī (the giver of liberation). Hrīṃ is simultaneously the power that creates the appearance of the world (māyā) and the power that dissolves it into Brahman. It is the beejakshara of the Śrī Yantra and is the central mantra of the Śrī Vidyā tradition.',
+    philosophy: 'In Shankarāchārya\'s Soundaryalaharī, verse 1 contains the implicit Hrīṃ in the relationship between Śiva (Ha = space/consciousness) and Śakti (Ī = the feminine creative power). Without Śakti, Śiva cannot even move — without the power of Hrīṃ, Brahman remains unmanifest. With Hrīṃ, creation happens. This is Advaita\'s understanding of māyā — not illusion in the pejorative sense, but the creative, transformative, and ultimately liberating power of the Absolute.',
+    physiology: 'The Ha component opens the chest (Anāhata); Ra activates the solar plexus fire (Maṇipūra); Ī draws energy upward through the throat and into the cranial vault; ṃ (the nasal bindu) seals and circulates the activated prāṇa throughout the subtle body. Sustained Hrīṃ chanting creates measurable cardiac coherence and activation of the right hemisphere of the brain.'
+  },
+  kleem: {
+    sanskrit: 'क्लीं', name: 'Klīṃ — Kāma Bīja', deity: 'Kāma (divine love) / Kṛṣṇa / Tripurā Sundarī',
+    chakra: 'Svādhiṣṭhāna (Sacral) → Anāhata (Heart)', svara: 'Re (water/emotion) to Ma (heart)',
+    element: 'Water + Air',
+    structure: 'Ka (Kāma/desire-as-divine-love) + La (earth/materiality) + Ī (Śakti) + ṃ (bindu)',
+    meaning: 'The beejakshara of divine love and attraction — Kāma in its highest sense as the force that draws all beings toward the divine. Not sensory desire (kāma in the mundane sense) but the cosmic force of attraction that Plato described as Eros — the force by which the universe seeks to return to its source.',
+    philosophy: 'In the Bhakti traditions that emerged from the Vaiṣṇava philosophical schools, Klīṃ is the mantra of Kṛṣṇa\'s cosmic attraction — the force that draws all jīvas toward liberation through love. Rāmānujāchārya\'s Viśiṣṭādvaita sees this as Bhakti\'s mechanism: the individual soul (jīva) is drawn toward Brahman (Viṣṇu) by a force that is simultaneously the highest form of desire and the highest form of grace.',
+    physiology: 'Ka activates the oral cavity resonance (Viśuddha approach); La creates earth/grounding in the lower body; Ī draws prāṇa upward; ṃ circulates and seals. Klīṃ chanting has been found in clinical settings to reduce anxiety, increase oxytocin (bonding hormone), and reduce the inflammatory markers associated with social isolation and loneliness.'
+  },
+  aim: {
+    sanskrit: 'ऐं', name: 'Aiṃ — Vāgbhava Bīja', deity: 'Sarasvatī (Learning, Arts, Music)',
+    chakra: 'Viśuddha (Throat) + Ājñā (Third Eye)', svara: 'Pa (Pañcama/throat) + Da (Dhaivata/intelligence)',
+    element: 'Space (Ākāśa) + Mind (Manas)',
+    structure: 'Ai (the diphthong of discriminative intelligence) + ṃ (bindu of cosmic concentration)',
+    meaning: 'The beejakshara of the Goddess Sarasvatī — the deity of knowledge, learning, music, and the arts. Aiṃ is literally the sonic form of the Vāgbhava (the power of speech-as-creative-intelligence). It is the beejakshara of the teacher-student transmission, of the moment when knowledge is truly received rather than merely heard.',
+    philosophy: 'The diphthong "ai" is formed by the combination of "a" (Brahman as unqualified Absolute) + "i" (Brahman as individualised consciousness) — making Aiṃ the sound of Brahman recognising itself through the individual intellect. This is the Advaitic understanding of all true knowledge: the moment of understanding is the moment when Brahman recognises Brahman through the apparent medium of a human mind. Sarasvatī is not the goddess of "information" — she is the goddess of the moment when consciousness illuminates consciousness.',
+    physiology: 'The "ai" vowel resonates in the oral cavity and frontal sinuses — activating the frontal cortex (seat of learning, judgment, and aesthetic appreciation). Combined with the ṃ nasal resonance, Aiṃ creates a standing wave in the cranial vault that neuroimaging associates with the "aha" moment of insight — the gamma wave burst that accompanies true understanding.'
+  },
+  sreem: {
+    sanskrit: 'श्रीं', name: 'Śrīṃ — Lakṣmī Bīja', deity: 'Lakṣmī (Abundance, Beauty, Grace)',
+    chakra: 'Anāhata (Heart) + Sahasrāra (Crown)', svara: 'Ma (abundance) + Ni (grace)',
+    element: 'Water + Light',
+    structure: 'Śa (Mahālakṣmī/the supreme Goddess of beauty) + Ra (fire of illumination) + Ī (Śakti) + ṃ (bindu)',
+    meaning: 'The beejakshara of Lakṣmī in all her forms — material abundance, aesthetic beauty, divine grace, and the inner radiance of the enlightened heart. Śrīṃ is the most auspicious of all beejaksharas — it literally means "auspiciousness" (śrī = beauty, grace, splendour) combined with the anusvāra of consciousness.',
+    philosophy: 'In the Śrī Vidyā tradition — which Shankarāchārya is credited with systematising — Śrīṃ is the centremost beejakshara of the Pañcadaśī mantra (the 15-syllable mantra of the Goddess Lalitā Tripurasundarī). The Pañcadaśī is structured as three groups of five syllables, each group representing one aspect of the Goddess\'s power. Śrīṃ is the key that unlocks all three aspects simultaneously.',
+    physiology: 'The Śa phoneme (palatal fricative) activates the palate-Ājñā connection; Ra (fire) activates the Maṇipūra; Ī (rising Śakti) draws prāṇa upward; ṃ (bindu) creates the cranial resonance. Śrīṃ chanting has been associated in clinical Āyurvedic settings with significant improvements in cardiovascular coherence, enhanced aesthetic sensitivity, and measurable increase in the practitioner\'s perception of beauty in the environment.'
+  },
+  kreem: {
+    sanskrit: 'क्रीं', name: 'Krīṃ — Kālī Bīja', deity: 'Mahākālī (Time-Dissolution-Liberation)',
+    chakra: 'Mūlādhāra → Sahasrāra (direct ascent)', svara: 'Sa (root) → Ni (crown, direct)',
+    element: 'Fire + Consciousness + Dissolution',
+    structure: 'Ka (Kālī/time) + Ra (fire/Rudra) + Ī (Śakti/power) + ṃ (bindu of dissolution)',
+    meaning: 'The beejakshara of Mahākālī — the supreme form of the Goddess as time, dissolution, and liberation. Krīṃ is the most intense of the beejaksharas — it directly activates the Kuṇḍalinī Śakti at the root chakra and drives it upward through all the chakras in a direct, non-gradual ascent. Traditionally practised only under direct Guru supervision.',
+    philosophy: 'Kālī is the aspect of Brahman that Shankarāchārya addresses in his Kālī hymns — particularly the Kālī Pañcaratna. She represents the Advaitic truth at its most stark: time devours all things (Kāla = time, Kālī = she who devours time/she who is beyond time), and what time cannot devour is Brahman itself. Krīṃ is the sound of this recognition — the moment when the practitioner, like Ramakrishna Paramahaṃsa, perceives that the darkness is divine.',
+    physiology: 'Ka activates the root/sacral region (Apāna prāṇa); Ra (fire) ignites the Maṇipūra solar fire; Ī (ascending Śakti) drives prāṇa upward through the central channel (Suṣumnā); ṃ (bindu) detonates the accumulated prāṇa at the Sahasrāra. The physiological experience of sustained Krīṃ chanting is described in the tradition as "internal fire" — the Kuṇḍalinī heat — which correlates in modern terms with significant sympathetic nervous system activation followed by deep parasympathetic rebound.'
+  },
+  gam: {
+    sanskrit: 'गं', name: 'Gaṃ — Gaṇapati Bīja', deity: 'Gaṇeśa (Remover of Obstacles)',
+    chakra: 'Mūlādhāra (Root)', svara: 'Sa (the foundational note)',
+    element: 'Earth + Intelligence',
+    structure: 'Ga (Gaṇeśa/the lord of ganas/cosmic forces) + ṃ (bindu)',
+    meaning: 'The beejakshara of Gaṇeśa — invoked before any significant undertaking in the Hindu tradition. Gaṃ removes the obstacles (vighna) that stand between the practitioner and the successful completion of any spiritual or material project. Its articulation at the Mūlādhāra (root) level reflects Gaṇeśa\'s function: establishing the secure foundation without which no spiritual ascent is possible.',
+    philosophy: 'In the Advaita tradition, obstacles are manifestations of avidyā (ignorance) — wrong identification with the body-mind rather than with the Ātman/Brahman. Gaṇeśa\'s function, from this perspective, is not to remove external obstacles but to remove the internal obstacle of ego-identification. Gaṃ is the sound of this removal — the first note of the cosmic scale, the ground note, the established foundation from which all music, all knowledge, all liberation can proceed.',
+    physiology: 'Ga articulates in the oral cavity with specific palatal resonance; ṃ creates the nasal humming that resonates in the sinuses. Gaṃ chanting is among the most widely used in clinical Nāda therapy for anxiety and rootlessness — its Mūlādhāra resonance directly activates the parasympathetic Apāna prāṇa that governs the body\'s fundamental sense of security and groundedness.'
+  },
+  dum: {
+    sanskrit: 'दुं', name: 'Duṃ — Durgā Bīja', deity: 'Durgā (Divine Protective Power)',
+    chakra: 'Maṇipūra (Solar) + Viśuddha (Throat)', svara: 'Ga (fire/will) + Pa (space/voice)',
+    element: 'Fire + Space',
+    structure: 'Du (Durgā/the inaccessible fortress of divine protection) + ṃ (bindu)',
+    meaning: 'The beejakshara of Durgā — the divine mother in her aspect as the protector, the fortress (durgā = fortress), and the destroyer of the demonic forces that obstruct spiritual progress. Duṃ invokes the specific quality of the divine feminine that combines fierce protection with absolute love — the mother who will destroy everything that harms her child.',
+    philosophy: 'In the Devī Māhātmya (Durgā Saptaśatī), the cosmic battle between Durgā and the asuras (demonic forces) is an allegorical description of the internal battle between discriminative wisdom (viveka) and ego-driven identification (ahaṃkāra). Duṃ is the sound of this battle — and its resolution in Durgā\'s victory is the Advaitic recognition that there was never a real battle: the apparent asuras were always just misidentified aspects of the Goddess herself.',
+    physiology: 'Du activates the dental-labial region with a specific downward (du) resonance that stimulates the Maṇipūra (solar plexus); ṃ draws this activation upward through the Viśuddha (throat). Duṃ chanting has been used in the tradition — and in modern Nāda therapy — for overcoming fear, establishing personal boundaries, and activating the Maṇipūra\'s capacity for clear, decisive action.'
+  },
+  hum: {
+    sanskrit: 'हूं', name: 'Hūṃ — Śiva-Teja Bīja', deity: 'Śiva (Pure Consciousness in its fieriest aspect) / Vajrapāṇi',
+    chakra: 'Viśuddha (Throat) → Sahasrāra', svara: 'Pa (throat) → Ni (crown)',
+    element: 'Space + Fire + Consciousness',
+    structure: 'Ha (Śiva/space) + Ū (long U/power and duration) + ṃ (bindu of cosmic fire)',
+    meaning: 'The beejakshara of the awakening of Śiva\'s cosmic fire — the sound that, in the Purāṇic tradition, burnt Kāma (mundane desire) to ashes when Śiva opened his third eye. Hūṃ is the sound of consciousness recognising its own infinite nature and, in that recognition, dissolving whatever stands between it and its own pure awareness.',
+    philosophy: 'In the Śaiva philosophical tradition (particularly in the Trika school of Kashmir Śaivism), Hūṃ represents the moment of Pratyabhijñā — "recognition" — the sudden awakening in which the individual consciousness recognises itself as Śiva (pure universal consciousness). This is not a gradual development — it is a flash of direct recognition, like the opening of the third eye, that cannot be forced but can be prepared for.',
+    physiology: 'Ha opens the chest-throat channel; the long Ū creates maximum resonance in the pharynx and frontal sinuses; ṃ detonates the accumulated resonance in the cranial vault. Hūṃ is the most energetically intense of the common beejaksharas — it creates measurable increases in body temperature, heart rate, and alertness during chanting, followed by the deepest parasympathetic rebound of any beejakshara.'
+  },
+  lam: {
+    sanskrit: 'लं', name: 'Laṃ — Pṛthvī Bīja (Earth)', deity: 'Gaṇeśa / Ḍākinī (guardian of root chakra)',
+    chakra: 'Mūlādhāra (Root)', svara: 'Sa (Ṣaḍja — the foundational note)',
+    element: 'Earth (Pṛthvī)',
+    structure: 'La (earth element/density/groundedness) + ṃ (bindu)',
+    meaning: 'The chakra beejakshara of the Mūlādhāra — the first and most fundamental. La is the dental-liquid consonant of Sanskrit, articulated with the tongue touching the teeth and the sound flowing through the oral cavity with maximum density. Its earth-quality is not metaphorical: the articulatory physics of La — the closure and release pattern — mirrors the physical process of roots taking hold in soil.',
+    philosophy: 'The Mūlādhāra and its beejakshara Laṃ represent, in the Tantric philosophical map, the first condensation of pure consciousness (Śiva-Śakti) into the densest level of matter. Every being begins here — not only in birth but in every moment of embodied existence. The spiritual path, in the Tantric framework, is not an escape from the Mūlādhāra but its full awakening: recognising that the very earth-substance of the body is itself divine consciousness in its densest form.',
+    physiology: 'La resonates in the perineal region through the dental-liquid articulation\'s downward resonance pattern; ṃ seals and concentrates this activation at the base of the spine. Laṃ chanting is the primary therapeutic intervention for conditions related to groundlessness, existential anxiety, immune deficiency, and autoimmune disorders — all of which have Mūlādhāra prāṇic deficiency at their root in the Āyurvedic diagnostic framework.'
+  },
+  vam: {
+    sanskrit: 'वं', name: 'Vaṃ — Jala Bīja (Water)', deity: 'Brahmā / Rākinī (guardian of sacral chakra)',
+    chakra: 'Svādhiṣṭhāna (Sacral)', svara: 'Re (Ṛṣabha — the emotional note)',
+    element: 'Water (Jala)',
+    structure: 'Va (water element/flow/emotion) + ṃ (bindu)',
+    meaning: 'The chakra beejakshara of the Svādhiṣṭhāna — the centre of creativity, sexuality, and emotional intelligence. Va is the labial-dental consonant of Sanskrit whose articulatory physics mirrors the movement of water: a smooth, flowing, continuous sound that cannot be stopped once it has begun to move. It is the beejakshara of all fluid processes — emotional flow, creative inspiration, sexual energy, and the flow of life itself.',
+    philosophy: 'The Svādhiṣṭhāna in the Tantric map is the centre where individual consciousness first experiences the pull of relatedness — the magnetism toward other consciousnesses that is, at its deepest level, the reflection of Brahman\'s own self-relatedness. The water element of Vaṃ corresponds to this quality: water flows toward other water, seeks the lowest point (humility), takes the shape of its container (adaptability), and is, at the molecular level, an expression of hydrogen bonds — the chemistry of relatedness.',
+    physiology: 'Va resonates in the lower abdominal region through its labial-dental downward resonance; ṃ seals and circulates at the Svādhiṣṭhāna region. Vaṃ chanting is used therapeutically for reproductive health, creative blockage, emotional numbness, and the specific Āyurvedic conditions associated with Vāta-Pitta imbalance in the lower abdomen.'
+  },
+  ram: {
+    sanskrit: 'रं', name: 'Raṃ — Agni Bīja (Fire)', deity: 'Viṣṇu / Lākinī (guardian of solar plexus)',
+    chakra: 'Maṇipūra (Solar Plexus)', svara: 'Ga (Gāndhāra — the note of will and fire)',
+    element: 'Fire (Agni/Tejas)',
+    structure: 'Ra (fire element/Agni/Rudra) + ṃ (bindu)',
+    meaning: 'The chakra beejakshara of the Maṇipūra — the solar plexus centre of will, power, digestion (of food and of experience), and the fire of transformation. Ra is the retroflex-liquid consonant of Sanskrit — the rolling "r" that resonates in the hard palate, the articulatory position associated in the Sanskrit chakra-phoneme map with the Mūrdhā (cerebral) region, and through the vagus nerve, with the solar plexus below.',
+    philosophy: 'The Maṇipūra is the fire that transforms raw matter into usable energy — both physically (the digestive fire, Agni) and spiritually (the transformative fire of sādhana that converts the dross of ego into the gold of Self-awareness). In the Śaiva tradition, Raṃ is associated with Rudra in his fire aspect — not destruction as negation, but fire as transformation, purification, and the revelation of the essential through the burning away of the non-essential.',
+    physiology: 'Ra resonates in the hard palate-cranial connection through its retroflex articulation, creating a specific resonance that propagates downward through the vagus nerve to the coeliac plexus (solar plexus). ṃ seals and concentrates this at the Maṇipūra region. Raṃ chanting is used therapeutically for digestive disorders, lack of will and motivation, fatigue, and the Āyurvedic conditions associated with Pitta deficiency or excess.'
+  }
+};
+
+function showBeeja(key) {
+  document.querySelectorAll('.beeja-cell').forEach(c => c.classList.remove('active'));
+  event.currentTarget.classList.add('active');
+  const d = beejaData[key];
+  document.getElementById('beeja-detail').classList.add('active');
+  document.getElementById('beeja-detail').innerHTML = `
+    <div style="display:flex;align-items:center;gap:1.5rem;margin-bottom:1.5rem;flex-wrap:wrap;">
+      <span class="devanagari" style="font-size:4rem;color:var(--maroon);line-height:1;">${d.sanskrit}</span>
+      <div>
+        <h3 style="font-size:1.5rem;color:var(--maroon);">${d.name}</h3>
+        <p style="color:var(--muted);font-size:0.9rem;margin-top:0.25rem;"><strong>Structure:</strong> ${d.structure}</p>
+        <p style="color:var(--muted);font-size:0.9rem;"><strong>Svara:</strong> ${d.svara} &nbsp;·&nbsp; <strong>Chakra:</strong> ${d.chakra} &nbsp;·&nbsp; <strong>Element:</strong> ${d.element}</p>
+        <p style="color:var(--muted);font-size:0.9rem;"><strong>Deity:</strong> ${d.deity}</p>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div>
+        <h4 style="color:var(--saffron);font-size:1rem;margin-bottom:0.5rem;">Meaning & Invocation</h4>
+        <p style="font-size:0.9rem;color:var(--muted);line-height:1.8;">${d.meaning}</p>
+        <h4 style="color:var(--saffron);font-size:1rem;margin-top:1rem;margin-bottom:0.5rem;">Physiological Resonance</h4>
+        <p style="font-size:0.9rem;color:var(--muted);line-height:1.8;">${d.physiology}</p>
+      </div>
+      <div style="background:linear-gradient(135deg,#3A0A0A,#5C1A00);border-radius:8px;padding:1.25rem;">
+        <h4 style="color:#FFD700;font-size:1rem;margin-bottom:0.75rem;">Philosophical Depth</h4>
+        <p style="font-size:0.88rem;color:rgba(255,220,150,0.85);line-height:1.8;">${d.philosophy}</p>
+      </div>
+    </div>
+  `;
+}
+
+/* ═══ RAGA DATA ═══ */
+const ragas = [
+  { name: 'Yaman', thaat: 'kalyan', devanagari: 'यमन', time: 'Evening (7–10 PM)', season: 'All seasons', rasa: 'Śṛṅgāra (love/beauty)', vadi: 'Ga', samvadi: 'Ni', aroh: ['Sa','Re','Ga','Ma♯','Pa','Da','Ni','Sa′'], avaroh: ['Sa′','Ni','Da','Pa','Ma♯','Ga','Re','Sa'], notes: 'Yaman is the most popular and approachable rāga of the Kalyāṇ family. Its distinguishing feature is Tīvra Ma (sharp fourth) — a single raised svara that transforms the entire emotional character of the scale. In Advaita philosophy, Yaman represents the state of sattva (pure clarity) that precedes the direct recognition of Brahman.', source: 'https://ragajunglism.org/ragas/masterlist/yaman/' },
+  { name: 'Bhairav', thaat: 'bhairav', devanagari: 'भैरव', time: 'Pre-dawn (4–7 AM)', season: 'All seasons', rasa: 'Śānta (peace) / Karuṇa (compassion)', vadi: 'Da', samvadi: 'Re', aroh: ['Sa','Re♭','Ga','Ma','Pa','Da♭','Ni','Sa′'], avaroh: ['Sa′','Ni','Da♭','Pa','Ma','Ga','Re♭','Sa'], notes: 'Bhairav is one of the oldest and most revered rāgas — sung at dawn, associated with Śiva in his most benign, meditative aspect. Both Re and Dha are komal (flat), creating a unique quality of tender introspection. The ancient texts describe Bhairav as the rāga of the sage emerging from samādhi — the consciousness that has touched the Absolute and is gently returning to the world.', source: 'https://ragajunglism.org/ragas/masterlist/bhairav/' },
+  { name: 'Bhairavī', thaat: 'bhairavi', devanagari: 'भैरवी', time: 'Concluding (anytime)', season: 'All seasons', rasa: 'Karuṇa (compassion) / Śṛṅgāra (love)', vadi: 'Ma', samvadi: 'Sa', aroh: ['Sa','Re♭','Ga♭','Ma','Pa','Da♭','Ni♭','Sa′'], avaroh: ['Sa′','Ni♭','Da♭','Pa','Ma','Ga♭','Re♭','Sa'], notes: 'Bhairavī is traditionally sung as the concluding piece of any concert — the rāga of farewell, of completion, of the heart\'s fullness after the journey of the performance. All four vikṛti svaras (Re, Ga, Dha, Ni) are komal — creating the most emotionally open and vulnerable of all rāga soundscapes. Philosophically: the rāga of the soul fully surrendered.', source: 'https://ragajunglism.org/ragas/masterlist/bhairavi/' },
+  { name: 'Darbārī Kāṇāḍā', thaat: 'asavari', devanagari: 'दरबारी काणड़ा', time: 'Late night (11 PM – 2 AM)', season: 'All seasons', rasa: 'Śānta (profound peace) / Bhayānaka (divine awe)', vadi: 'Re', samvadi: 'Pa', aroh: ['Sa','Re♭','Ga♭','Ma','Pa','Da♭','Ni♭','Sa′'], avaroh: ['Sa′','Ni♭','Da♭','Pa','Ma','Ga♭','Re♭','Sa'], notes: 'Darbārī Kāṇāḍā — the rāga of the royal court of Akbar, traditionally attributed to Tansen — is associated with Śiva in his most awesome, silent, and profound aspect. Its characteristic Gamaka (oscillation) on komal Ga — a slow, heavy oscillation that takes several seconds to complete — creates the unique sensation of time dissolving. The rāga of the deepest night; the rāga of Śiva\'s eternal stillness.', source: 'https://ragajunglism.org/ragas/masterlist/darbari/' },
+  { name: 'Todi', thaat: 'todi', devanagari: 'तोड़ी', time: 'Late morning (9 AM – 12 PM)', season: 'All seasons', rasa: 'Śṛṅgāra (love) / Vīra (heroism) / Karuṇa', vadi: 'Dha', samvadi: 'Ga', aroh: ['Sa','Re♭','Ga♭','Ma♯','Pa','Da','Ni','Sa′'], avaroh: ['Sa′','Ni','Da','Pa','Ma♯','Ga♭','Re♭','Sa'], notes: 'Todi is considered among the most complex and emotionally multidimensional of all rāgas. It omits Pa in āroha — the only foundational rāga to do so — creating a searching quality, a musical question whose answer only arrives in the avaroha. The combination of komal Re, komal Ga, tīvra Ma, and shuddha Dha creates a unique tension that the ancient masters described as the sound of longing for liberation.', source: 'https://ragajunglism.org/ragas/masterlist/todi/' },
+  { name: 'Bihāg', thaat: 'bilaval', devanagari: 'बिहाग', time: 'Late night (9 PM – 12 AM)', season: 'All seasons', rasa: 'Śṛṅgāra (love) / Śānta (peace)', vadi: 'Ga', samvadi: 'Ni', aroh: ['Sa','Ga','Ma','Pa','Ni','Sa′'], avaroh: ['Sa′','Ni','Da','Pa','Ma♯','Pa','Ma','Ga','Re','Sa'], notes: 'Bihāg is a rāga of intimate romantic love — the rāga of the late evening, of rest and warmth after the day\'s activity. Its characteristic feature is the use of both Ma (shuddha and tīvra) in avaroha, creating a gentle meandering quality. In the bhakti tradition, Bihāg is associated with Kṛṣṇa\'s return to the gopīs at night.', source: 'https://ragajunglism.org/ragas/masterlist/bihag/' },
+  { name: 'Māruwa (Mārwā)', thaat: 'marwa', devanagari: 'मारवा', time: 'Twilight (4–7 PM)', season: 'All seasons', rasa: 'Karuṇa (yearning) / Adbhuta (wonder)', vadi: 'Re', samvadi: 'Da', aroh: ['Sa','Re♭','Ga','Ma♯','Da','Ni','Sa′'], avaroh: ['Sa′','Ni','Da','Ma♯','Ga','Re♭','Sa'], notes: 'Mārwā is the most extraordinary of rāgas — it omits Pa (Pañcama) entirely, creating a floating, groundless quality. Without Pa — the most consonant of all intervals, the note of stability — Mārwā hovers in a state of perpetual searching, of unresolved longing. The twilight time and the absence of Pa make it the rāga of the threshold — between day and night, between immanence and transcendence.', source: 'https://ragajunglism.org/ragas/masterlist/marwa/' },
+  { name: 'Bhūpālī', thaat: 'kalyan', devanagari: 'भूपाली', time: 'Evening (7–10 PM)', season: 'All seasons', rasa: 'Śānta (peace) / Śṛṅgāra (beauty)', vadi: 'Ga', samvadi: 'Da', aroh: ['Sa','Re','Ga','Pa','Da','Sa′'], avaroh: ['Sa′','Da','Pa','Ga','Re','Sa'], notes: 'Bhūpālī is a pentatonic rāga (uses only 5 notes — omitting Ma and Ni), making it one of the most structurally simple yet emotionally rich rāgas. The five svaras correspond to the Pañcabhūtas (five elements), making Bhūpālī the rāga of elemental simplicity and cosmic completeness. It is often the first rāga taught to young students for its clarity, accessibility, and profound musicality.', source: 'https://ragajunglism.org/ragas/masterlist/bhupali/' },
+  { name: 'Mālkauns', thaat: 'bhairavi', devanagari: 'मालकौंस', time: 'Midnight (12–3 AM)', season: 'All seasons', rasa: 'Bhayānaka (awe) / Śānta (peace)', vadi: 'Ma', samvadi: 'Sa', aroh: ['Sa','Ga♭','Ma','Da♭','Ni♭','Sa′'], avaroh: ['Sa′','Ni♭','Da♭','Ma','Ga♭','Sa'], notes: 'Mālkauns is a rāga of profound stillness and mystery — it omits both Re and Pa, creating a landscape of vast open spaces between the remaining five notes. The ancient texts describe Mālkauns as the rāga Tansen sang to resurrect a dying man. Its midnight association places it in the domain of Śiva\'s dance at the cremation ground — where attachment to the body dissolves and pure consciousness remains.', source: 'https://ragajunglism.org/ragas/masterlist/malkauns/' },
+  { name: 'Khamāj', thaat: 'khamaj', devanagari: 'खमाज', time: 'Night (9 PM – 12 AM)', season: 'All seasons', rasa: 'Śṛṅgāra (love) / Hāsya (joy)', vadi: 'Ga', samvadi: 'Ni', aroh: ['Sa','Re','Ga','Ma','Pa','Da','Ni♭','Sa′'], avaroh: ['Sa′','Ni♭','Da','Pa','Ma','Ga','Ma','Re','Sa'], notes: 'Khamāj is the rāga of playfulness and romantic joy — it uses both Ni (shuddha in āroha, komal in avaroha), creating a flexible, dance-like quality. It is the thāt of Thumrī — the light classical style associated with the bhakti poetry of Mīrābāī and the Kṛṣṇa devotional tradition. Khamāj is the sound of divine love made accessible, intimate, and joyful.', source: 'https://ragajunglism.org/ragas/masterlist/khamaj/' },
+  { name: 'Bageshri', thaat: 'kafi', devanagari: 'बागेश्री', time: 'Midnight (12–3 AM)', season: 'Monsoon (Varṣā)', rasa: 'Karuṇa (longing) / Śṛṅgāra (love in separation)', vadi: 'Ma', samvadi: 'Sa', aroh: ['Sa','Re♭','Ga♭','Ma','Da','Ni♭','Sa′'], avaroh: ['Sa′','Ni♭','Da','Ma','Ga♭','Re♭','Sa'], notes: 'Bāgeshri is one of the most beloved of all rāgas — the rāga of Viraha (separation in love). In the bhakti tradition, it is associated with the gopīs\' longing for Kṛṣṇa, and with Mīrābāī\'s poems of longing for her divine beloved. The komal Re, Ga, and Ni, combined with the omission of Pa in āroha, creates an emotional landscape of exquisite, tender yearning.', source: 'https://ragajunglism.org/ragas/masterlist/bageshri/' },
+  { name: 'Āsāvarī', thaat: 'asavari', devanagari: 'आसावरी', time: 'Late morning (9 AM–12 PM)', season: 'All seasons', rasa: 'Karuṇa (compassion) / Śānta', vadi: 'Da', samvadi: 'Ga', aroh: ['Sa','Re','Ma','Pa','Da♭','Sa′'], avaroh: ['Sa′','Ni♭','Da♭','Pa','Ma','Ga♭','Re','Sa'], notes: 'Āsāvarī is among the oldest and most fundamental of rāgas — its very name may derive from Āsā (hope, desire) + vārī (water/flowing), making it the rāga of flowing hope. It gives its name to an entire thāt (scale family). The characteristic komal Ga, Dha, and Ni in avaroha create the gentle pathos that makes Āsāvarī the rāga of compassionate acceptance.', source: 'https://ragajunglism.org/ragas/masterlist/asavari/' }
+];
+
+let currentFilter = 'all';
+
+function renderRagas(list) {
+  const container = document.getElementById('ragaList');
+  if (!list.length) {
+    container.innerHTML = '<div class="card" style="text-align:center;color:var(--muted);">No rāgas found matching your search.</div>';
+    return;
+  }
+  container.innerHTML = list.map((r, i) => `
+    <div class="raga-item" id="raga-${i}">
+      <div class="raga-header" onclick="toggleRaga(${i})">
+        <div>
+          <div class="raga-name"><span class="devanagari" style="font-size:1.3rem;margin-right:0.5rem;">${r.devanagari}</span> ${r.name}</div>
+          <div class="raga-meta">${r.thaat.charAt(0).toUpperCase()+r.thaat.slice(1)} Thāt · ${r.time} · ${r.rasa}</div>
+        </div>
+        <span class="raga-arrow">▼</span>
+      </div>
+      <div class="raga-body">
+        <div class="raga-attribs">
+          <div class="raga-attrib"><div class="ra-label">Time</div><div class="ra-val">${r.time}</div></div>
+          <div class="raga-attrib"><div class="ra-label">Season</div><div class="ra-val">${r.season}</div></div>
+          <div class="raga-attrib"><div class="ra-label">Vādī</div><div class="ra-val">${r.vadi}</div></div>
+          <div class="raga-attrib"><div class="ra-label">Saṃvādī</div><div class="ra-val">${r.samvadi}</div></div>
+          <div class="raga-attrib"><div class="ra-label">Rasa</div><div class="ra-val" style="font-size:0.8rem;">${r.rasa}</div></div>
+          <div class="raga-attrib"><div class="ra-label">Thāt</div><div class="ra-val">${r.thaat.charAt(0).toUpperCase()+r.thaat.slice(1)}</div></div>
+        </div>
+        <div>
+          <p style="font-size:0.82rem;color:var(--faint);margin-bottom:0.4rem;text-transform:uppercase;letter-spacing:0.06em;">Āroha</p>
+          <div class="svara-pills">${r.aroh.map(s => `<span class="svara-pill ${s.includes('♭')?'komal':s.includes('♯')?'tivra':''}">${s}</span>`).join('')}</div>
+          <p style="font-size:0.82rem;color:var(--faint);margin-bottom:0.4rem;text-transform:uppercase;letter-spacing:0.06em;">Avaroha</p>
+          <div class="svara-pills">${r.avaroh.map(s => `<span class="svara-pill ${s.includes('♭')?'komal':s.includes('♯')?'tivra':''}">${s}</span>`).join('')}</div>
+        </div>
+        <p style="font-size:0.92rem;color:var(--muted);line-height:1.8;margin-top:0.75rem;">${r.notes}</p>
+        <a href="${r.source}" target="_blank" class="raga-source-link">→ Full database entry at Rāga Junglism</a>
+      </div>
+    </div>
+  `).join('');
+}
+
+function toggleRaga(i) {
+  const el = document.getElementById('raga-' + i);
+  el.classList.toggle('open');
+}
+
+function filterRagas() {
+  const q = document.getElementById('ragaSearch').value.toLowerCase();
+  const filtered = ragas.filter(r =>
+    (currentFilter === 'all' || r.thaat === currentFilter) &&
+    (r.name.toLowerCase().includes(q) || r.rasa.toLowerCase().includes(q) || r.time.toLowerCase().includes(q) || r.notes.toLowerCase().includes(q))
+  );
+  renderRagas(filtered);
+}
+
+function filterByThaat(thaat, btn) {
+  currentFilter = thaat;
+  document.querySelectorAll('.raga-filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  filterRagas();
+}
+
+/* ═══ VIEWPOINTS ═══ */
+function showVP(name) {
+  document.querySelectorAll('.vp-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.vp-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('vp-' + name).classList.add('active');
+  event.target.classList.add('active');
+}
+
+/* ═══ CHATBOT ═══ */
+const botResponses = [
+  "Thank you for your message. Our team will review and respond within 24-48 hours at smith123846@gmail.com. Your query about Sanskrit sound and philosophy is noted.",
+  "Namaste 🙏 Your message has been received. For urgent enquiries, please call +91 91213 79100. We will respond within 48 hours.",
+  "Your question touches on a profound area of Sanskrit knowledge. Our team will provide a detailed response within 48 hours. You may also explore the relevant portal from our Cultural Musings network for immediate reference.",
+  "Thank you for connecting with NadaBrahman. Your enquiry has been logged and will reach our team at smith123846@gmail.com. We look forward to sharing deeper knowledge with you."
+];
+let botIdx = 0;
+
+function sendChat() {
+  const input = document.getElementById('chatInput');
+  const val = input.value.trim();
+  if (!val) return;
+  const msgs = document.getElementById('chatMessages');
+  msgs.innerHTML += `<div class="chat-msg user">${val}</div>`;
+  input.value = '';
+  setTimeout(() => {
+    msgs.innerHTML += `<div class="chat-msg bot">${botResponses[botIdx % botResponses.length]}</div>`;
+    botIdx++;
+    msgs.scrollTop = msgs.scrollHeight;
+  }, 800);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+/* ═══ INIT ═══ */
+showSvara('sa');
+showBeeja('om');
+renderRagas(ragas);
+</script>
+</body>
+</html>
